@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="93"
-  DTS:VersionGUID="{91FFA30C-A825-4DE7-BACE-F981D026D929}">
+  DTS:VersionBuild="98"
+  DTS:VersionGUID="{35F1DAAC-181C-457D-BECA-247C78A2B422}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -751,7 +751,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\equipos.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\equipos.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -760,7 +760,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Equipos"
-              DTS:DTSID="{73FF4F76-2143-4651-BA2F-A91512E4CF5E}"
+              DTS:DTSID="{8697036D-A08D-46B0-9AFE-AEF8D8509E8C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -780,7 +780,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\obras.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\obras.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -788,8 +788,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="OBRAS"
-              DTS:DTSID="{C0359F42-75E4-4D4C-8F7C-8562CAE62107}"
+              DTS:ObjectName="Columna derivada.OBRAS"
+              DTS:DTSID="{9D142C9B-6355-4E65-98E3-0B48C9E05E09}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -810,7 +810,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\salidas combustible unidad tanqueo 2.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\salidas\salidas combustible unidad tanqueo 2.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -818,7 +818,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="fecha"
-              DTS:DTSID="{D829DDB4-61E2-4F8B-A7C4-CFB0FDBCCFC8}"
+              DTS:DTSID="{F56AEEE6-26FD-4706-8D54-84A1184819F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -826,7 +826,7 @@
               DTS:DataType="21"
               DTS:TextQualified="True"
               DTS:ObjectName="minutos_dia"
-              DTS:DTSID="{5995BD4D-28B8-4602-AEDD-32FB255892B5}"
+              DTS:DTSID="{63E5AFF8-BA4D-468E-84D0-EF30A1383E1B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -835,7 +835,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="recibo"
-              DTS:DTSID="{08CAA013-4512-4ADF-B1F2-DC129023E6A3}"
+              DTS:DTSID="{DC875CFC-D64D-4E61-A9F4-D0508545EBDF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -844,7 +844,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="equipo"
-              DTS:DTSID="{5CCB7DDB-6CD8-4F71-8D46-DB553E59608E}"
+              DTS:DTSID="{1DEDDE0F-CF07-4B64-B036-89C132CCE0EB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -853,7 +853,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="obra"
-              DTS:DTSID="{15E1CC6A-60CA-4CA6-A86C-8DCF051C358E}"
+              DTS:DTSID="{4E1C2CE4-19C9-441A-8B40-4A3B22367DA2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -862,7 +862,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nivel_tanque"
-              DTS:DTSID="{A23227C7-253C-4DA4-B9A3-71AC7F569634}"
+              DTS:DTSID="{30119EAB-73D9-4242-9609-85A886EAF0BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -871,7 +871,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="kilometraje"
-              DTS:DTSID="{24CFAE5A-2A18-4F28-ACA3-9ACC189B192F}"
+              DTS:DTSID="{DE20061A-0D0C-4FD8-9E2A-56181A6E2ED4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -880,7 +880,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="horometro"
-              DTS:DTSID="{CDD0217D-0299-48EA-81FE-C2879CEA1F62}"
+              DTS:DTSID="{CEC3494B-BE16-4C26-8498-F5C64B6337EB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -889,7 +889,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_inicial_1"
-              DTS:DTSID="{1833DF60-4AB2-42B8-913F-C12199F31F97}"
+              DTS:DTSID="{2C5F17C0-C3F0-4E44-B077-BF7C52096822}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -898,7 +898,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_final_1"
-              DTS:DTSID="{08C7A795-B0CA-466D-8913-43FAB5AD588C}"
+              DTS:DTSID="{41D63147-9397-4D2D-85E8-853E88F5DFB4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -907,7 +907,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_despachados"
-              DTS:DTSID="{5993FC2B-92D4-4737-B5A4-274CDAA1D251}"
+              DTS:DTSID="{67C4EF72-56AD-4A8A-9FF5-53AD67092C04}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -916,7 +916,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_restantes"
-              DTS:DTSID="{B351CA83-5620-473C-825F-A8266BF5D315}"
+              DTS:DTSID="{921B35E7-B5BC-4915-B2A2-3E83290DE9CF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -925,7 +925,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="total_desachado"
-              DTS:DTSID="{233A5B0D-D39F-458A-8893-AD0B1F558AA9}"
+              DTS:DTSID="{040F2B46-C560-44BA-A8C9-077903430D15}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -934,7 +934,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="observaciones"
-              DTS:DTSID="{C90767AB-8758-4265-A071-D4DA18A84941}"
+              DTS:DTSID="{54228EB5-8CE4-42ED-BBEB-D2874DC7CB7A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -943,7 +943,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="empresa"
-              DTS:DTSID="{C06D9D94-AC03-4E10-8170-A0A26C8B1983}"
+              DTS:DTSID="{5A3C4D02-FCC7-42A4-9E33-AAF0E470D53D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -952,7 +952,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="efectivo"
-              DTS:DTSID="{1B8BB446-8E0A-4E5F-AC21-05B9FEB3146E}"
+              DTS:DTSID="{FE499CA1-EC82-426D-A62B-9F5DB18C34E8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -961,7 +961,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cobrado"
-              DTS:DTSID="{D50FBFAD-3BEE-4D20-AB87-0A728020CB2B}"
+              DTS:DTSID="{4C986731-6F3D-44B8-A21E-E420B4D4F6FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -970,7 +970,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="revision"
-              DTS:DTSID="{FA3550E1-94B9-47F4-8507-37C5309AB2EE}"
+              DTS:DTSID="{41561433-CE33-4F0F-BDE3-7D278BD6EF57}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -991,7 +991,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\salidas combustible INARC.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\salidas\salidas combustible INARC.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -999,7 +999,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="fecha"
-              DTS:DTSID="{7BD13905-E7A5-4609-A1AF-14D18EB91B04}"
+              DTS:DTSID="{8DCA7981-EF00-4595-B059-679A8E49829C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1007,7 +1007,7 @@
               DTS:DataType="21"
               DTS:TextQualified="True"
               DTS:ObjectName="minutos_dia"
-              DTS:DTSID="{C568A613-9BD3-41E0-891C-8F0ADA4DCD64}"
+              DTS:DTSID="{74A7F89E-88F3-4B1E-A43B-400D6CAF969E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1016,7 +1016,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="recibo"
-              DTS:DTSID="{B637ADFB-19D6-4426-A459-21E527D4FCD1}"
+              DTS:DTSID="{68E6C5B8-67FE-4F81-82DF-D91705F5D1F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1025,7 +1025,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="equipo"
-              DTS:DTSID="{57F15D4C-5B8F-4E52-91A4-1B5AAC855B72}"
+              DTS:DTSID="{BB40C0C3-0339-45EC-B8D3-68EF160C6DCE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1034,7 +1034,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="obra"
-              DTS:DTSID="{73EDFC49-821C-4F39-A2C6-D3816A7BAB70}"
+              DTS:DTSID="{3E7CA2E3-61D5-4F74-97A1-A4B26D0F6C08}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1043,7 +1043,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nivel_tanque"
-              DTS:DTSID="{627FC2E0-56E5-423B-A98D-C821F214A95E}"
+              DTS:DTSID="{6D0BC3C5-500A-4EEA-B3AB-277FA7EFE8DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1052,7 +1052,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="kilometraje"
-              DTS:DTSID="{6BFD8B69-B8EA-47CF-BE68-95DA0B5C8737}"
+              DTS:DTSID="{D001805E-E7FF-4701-9B77-B46AA369C42B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1061,7 +1061,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="horometro"
-              DTS:DTSID="{467C71E8-0218-4BB8-8DDA-8100913E9D9D}"
+              DTS:DTSID="{89095E3D-CC24-4851-8627-FE25B43CF667}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1070,7 +1070,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_inicial_1"
-              DTS:DTSID="{0738E380-4721-459C-96A9-973E47E37505}"
+              DTS:DTSID="{EAFA79F6-9367-4AB6-A486-6C761C583547}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1079,7 +1079,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_final_1"
-              DTS:DTSID="{0FCD5C4D-4E72-497D-B49C-2B01456937A1}"
+              DTS:DTSID="{9E76D67D-385F-4CE7-A2DB-EDAC7FF34B89}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1088,7 +1088,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_despachados"
-              DTS:DTSID="{76FD976B-7F5F-45A7-9923-09F50083748A}"
+              DTS:DTSID="{DE9F08A9-7216-45F9-A701-324610029BF2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1097,7 +1097,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_restantes"
-              DTS:DTSID="{ACC0F760-635B-465A-B20B-120764E11A45}"
+              DTS:DTSID="{AA69EB75-E56F-4880-8C43-6CF247BA05DD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1106,7 +1106,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="total_desachado"
-              DTS:DTSID="{7F77A1F6-15C1-495C-8004-D708975B14B5}"
+              DTS:DTSID="{8FB148B0-86E7-4DEA-A7D1-EA3F148F10D9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1115,7 +1115,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="observaciones"
-              DTS:DTSID="{DE97168E-ACD2-4E7E-841A-3A4FE9C928C4}"
+              DTS:DTSID="{4F880810-2323-4DE1-9B1C-34B69B5A0192}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1124,7 +1124,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="empresa"
-              DTS:DTSID="{97DB9249-3793-4CBF-B86F-FF19F14030D3}"
+              DTS:DTSID="{F4452670-9BF9-46BE-A301-0D55B3FD662B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1133,7 +1133,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="efectivo"
-              DTS:DTSID="{38246002-A37E-4A74-B3C7-843B0EB3FCA6}"
+              DTS:DTSID="{8FC8DB5C-E188-4C8C-A6EE-108DBAB564CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1142,7 +1142,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cobrado"
-              DTS:DTSID="{DDF4B66F-56AF-421D-A6B9-BA97C95A96B2}"
+              DTS:DTSID="{76EC675A-06C8-457E-A614-4A85832AE2EB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1151,7 +1151,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="revision"
-              DTS:DTSID="{4352D82D-D1E9-45D0-A870-FADB8FE68BAE}"
+              DTS:DTSID="{276A66BF-B4BB-4599-B8EF-F08F3537F982}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1172,7 +1172,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\salidas combustible SURTIDOR SP 1.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\salidas\salidas combustible SURTIDOR SP 1.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1180,7 +1180,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="fecha"
-              DTS:DTSID="{D5B8DFA5-BE77-4BC9-BECC-7F69618AF41C}"
+              DTS:DTSID="{FFE8D2DB-7E92-4520-8A59-5451ADAC1FB0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1188,7 +1188,7 @@
               DTS:DataType="21"
               DTS:TextQualified="True"
               DTS:ObjectName="minutos_dia"
-              DTS:DTSID="{D6711744-08D9-452D-98D1-F3E185BECA76}"
+              DTS:DTSID="{2E1CE711-95E8-4DF8-9061-2A0892D375B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1197,7 +1197,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="recibo"
-              DTS:DTSID="{F1C99055-EAE7-40BA-9FEB-DCB98533B883}"
+              DTS:DTSID="{7E9C2E52-D26A-47C2-8DE6-6922791DB23F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1206,7 +1206,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="equipo"
-              DTS:DTSID="{54DAF7E8-08D7-486B-878E-ECC2D6D88831}"
+              DTS:DTSID="{EA60EE36-3EA3-4B5A-AFB8-69C06D623E5B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1215,7 +1215,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="obra"
-              DTS:DTSID="{83505B32-447B-4828-9117-24FD343C83CE}"
+              DTS:DTSID="{75906CE7-698F-4548-B718-126651B528F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1224,7 +1224,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nivel_tanque"
-              DTS:DTSID="{481B13F6-ABD5-4EF2-9DB5-4567EC862A72}"
+              DTS:DTSID="{22E2CFF4-83D5-42B6-B63B-000D40FE757A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1233,7 +1233,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="kilometraje"
-              DTS:DTSID="{44605FEA-AE91-494C-80B8-46371BB00A8F}"
+              DTS:DTSID="{4F8FAC34-9C01-4705-A7F0-414FBB1349D7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1242,7 +1242,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="horometro"
-              DTS:DTSID="{78513096-3429-4E46-A371-9A7A69178424}"
+              DTS:DTSID="{4CC2E8B5-A24F-4BAA-9898-7541FB521093}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1251,7 +1251,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_inicial_1"
-              DTS:DTSID="{6409DB3B-825A-44E1-A813-C3C04CFD8DB5}"
+              DTS:DTSID="{452B0DE9-5CEC-47FC-B059-7A563908DD24}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1260,7 +1260,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_final_1"
-              DTS:DTSID="{2FAEE95E-8C0B-45E3-BA92-724C7068F237}"
+              DTS:DTSID="{FDD3F043-3E27-4AE4-981F-12B030EB1667}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1269,7 +1269,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_inicial_2"
-              DTS:DTSID="{B752D618-9BEF-496C-9304-08354CF2644D}"
+              DTS:DTSID="{3E0C9A4E-CAB3-4A3E-9E94-B1373AD82272}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1278,7 +1278,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_final_2"
-              DTS:DTSID="{4248A154-3B59-4EFA-B092-07DA5F617853}"
+              DTS:DTSID="{C09CD516-CA27-47F7-9CBB-91B576B0FB33}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1287,7 +1287,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_despachados"
-              DTS:DTSID="{2F1557E4-40F8-4070-B877-6A72757126C3}"
+              DTS:DTSID="{5502FC08-05C9-432B-BD57-8F61915AD8A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1296,7 +1296,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_restantes"
-              DTS:DTSID="{50735954-B6F4-4665-9BF1-F6CCEE2893B8}"
+              DTS:DTSID="{67BCD041-1426-4A7B-A089-F94C2FED6CFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1305,7 +1305,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="total_desachado"
-              DTS:DTSID="{68D9A96C-88D4-4EF5-937E-71B2E450A536}"
+              DTS:DTSID="{FE72C6E8-D422-4BA0-99B4-B9D513933D14}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1314,7 +1314,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="observaciones"
-              DTS:DTSID="{227E22A4-EC5D-4095-95F8-8C6BBB57A7A5}"
+              DTS:DTSID="{46FA8223-252C-4FE8-9F2D-0ED51254A13E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1323,7 +1323,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="empresa"
-              DTS:DTSID="{C8C54FB1-1525-48D1-A624-B8CBA11FB269}"
+              DTS:DTSID="{405ACAE6-C190-4CC2-ACBA-0D3A9F61E442}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1332,7 +1332,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="efectivo"
-              DTS:DTSID="{89AFEB06-293D-4A5B-A863-15C4B60D3059}"
+              DTS:DTSID="{BB193489-09C3-4E51-AD32-63C25332CCC1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1341,25 +1341,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cobrado"
-              DTS:DTSID="{351516FC-1925-41D5-9620-C5758642D9CB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="revision"
-              DTS:DTSID="{5A0CBD78-8F97-463F-BF89-BD38DDE6D329}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="galones"
-              DTS:DTSID="{492DDF75-46D2-4D54-BDF8-1D77813A6C01}"
+              DTS:DTSID="{C415D2C3-CB1A-4E39-95BA-44E828809C75}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1367,8 +1349,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="contador1"
-              DTS:DTSID="{2CF4F0F8-880A-4FBF-ABDE-F47B532169EE}"
+              DTS:ObjectName="revision"
+              DTS:DTSID="{083EE23A-BD67-44E7-8439-BAC5E20BBE94}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1389,7 +1371,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\salidas combustible unidad tanqueo 1.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\salidas\salidas combustible unidad tanqueo 1.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1397,7 +1379,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="fecha"
-              DTS:DTSID="{4A7B6D47-AD86-47BB-BBBE-42ECA194E2BF}"
+              DTS:DTSID="{81F407A2-A91D-43E8-BF86-96318B9AD4D9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1405,7 +1387,7 @@
               DTS:DataType="21"
               DTS:TextQualified="True"
               DTS:ObjectName="minutos_dia"
-              DTS:DTSID="{CC417D7B-5CF3-4FD1-A34E-DC751560A41B}"
+              DTS:DTSID="{0D8E56B3-D150-4353-8C34-3BB663051AF3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1414,7 +1396,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="recibo"
-              DTS:DTSID="{3D056DA8-61FB-4C89-B967-6A319CFD9133}"
+              DTS:DTSID="{938B64A8-3E70-4D4E-8778-8BBE5C1A3E12}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1423,7 +1405,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="equipo"
-              DTS:DTSID="{FB03975C-623E-427B-B8E3-FA36833E3FAA}"
+              DTS:DTSID="{3BF8D20B-8E63-45EE-8AF7-5DA888F87DA1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1432,7 +1414,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="obra"
-              DTS:DTSID="{DC3D4A21-699A-4C8C-AD59-46B8E7E9BFF9}"
+              DTS:DTSID="{26CA1DA2-1B34-4E0F-A4BB-D31B4760E6DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1441,7 +1423,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nivel_tanque"
-              DTS:DTSID="{130CA243-28C9-47DC-9D6E-9B7D4739331D}"
+              DTS:DTSID="{4F708A37-8D44-4692-A615-80DB71B30CEF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1450,7 +1432,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="kilometraje"
-              DTS:DTSID="{78937794-ACE4-4759-8830-8F123CB19FE3}"
+              DTS:DTSID="{9290773E-8819-4FE4-BC86-59077B0E9FFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1459,7 +1441,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="horometro"
-              DTS:DTSID="{6E31BC66-F04F-4D44-B0C4-CB96CCF3CF36}"
+              DTS:DTSID="{C2E02FA1-B4F4-4CFF-ADCD-9B206BB0B097}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1468,7 +1450,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_inicial_1"
-              DTS:DTSID="{B72360E4-54A3-4293-9967-B4A07344A056}"
+              DTS:DTSID="{E4014E06-DE68-4E00-BED4-14A0345B8A60}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1477,7 +1459,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_final_1"
-              DTS:DTSID="{3D16EE46-B2A2-4353-9D0F-6463D84EF011}"
+              DTS:DTSID="{5BA80D55-12A2-4A93-802B-9DB339ADEEF8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1486,7 +1468,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_despachados"
-              DTS:DTSID="{68FD8E83-6A53-4FC5-A7A2-71B9A6BBC5B3}"
+              DTS:DTSID="{1D9D96C9-048F-4D42-B191-9A013A895822}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1495,7 +1477,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_restantes"
-              DTS:DTSID="{A733514D-537D-4D22-98D4-071700A94EFF}"
+              DTS:DTSID="{BFAA00F7-51E1-4C18-9877-F7CC90642845}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1504,7 +1486,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="total_desachado"
-              DTS:DTSID="{C46C5024-87F3-4D8A-BB76-5B1DA0AB11CA}"
+              DTS:DTSID="{EE76D848-8938-4A16-A382-7B94BCDF1439}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1513,7 +1495,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="observaciones"
-              DTS:DTSID="{8ACE3A2D-E4B3-4660-9238-724CA372C08A}"
+              DTS:DTSID="{5FA7E27D-5DA4-41E4-8B61-AF23057B3BD3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1522,7 +1504,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="empresa"
-              DTS:DTSID="{B5960981-96C5-4371-A9C4-73A678F40D60}"
+              DTS:DTSID="{59026646-5066-437C-A0F8-2F23D3223249}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1531,7 +1513,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="efectivo"
-              DTS:DTSID="{470C4CF9-0830-4E8D-9DAD-A83124852E86}"
+              DTS:DTSID="{D5EBF6E1-BEF6-490B-BF33-E0DC783D4651}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1540,7 +1522,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cobrado"
-              DTS:DTSID="{91799E69-5982-44C1-934F-E851FF0B1D67}"
+              DTS:DTSID="{899C6B6E-60ED-44E9-B0AA-75F37F404AD5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1549,7 +1531,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="revision"
-              DTS:DTSID="{864FEFA1-B19B-4677-B4E2-2F89BEEC030A}"
+              DTS:DTSID="{6EF85CBC-4290-4981-A255-33895261D271}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1570,7 +1552,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\salidas combustible UT1.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\salidas\salidas combustible UT1.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1578,7 +1560,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="fecha"
-              DTS:DTSID="{E5BB692C-E3F4-46F3-80FE-A821B03417C9}"
+              DTS:DTSID="{7682659E-4C77-4B5C-8023-B1DAA8CFF009}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1586,7 +1568,7 @@
               DTS:DataType="21"
               DTS:TextQualified="True"
               DTS:ObjectName="minutos_dia"
-              DTS:DTSID="{11B62457-4C39-42C4-BD73-27071B798651}"
+              DTS:DTSID="{ACB380C9-111D-4DC6-ABD5-E6F4EA1BA734}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1595,7 +1577,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="recibo"
-              DTS:DTSID="{90203EC4-D455-4694-A714-2C9A71F5853E}"
+              DTS:DTSID="{6F9517EA-E07D-42CC-874A-EE9D6A1829F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1604,7 +1586,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="equipo"
-              DTS:DTSID="{2B6BF0CF-836F-488C-B9AB-40574CB328CB}"
+              DTS:DTSID="{92E7EBBC-44F8-41BF-B2F8-3C771517950E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1613,7 +1595,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="obra"
-              DTS:DTSID="{6019C180-C6AE-473E-A74A-65F4B5E3168C}"
+              DTS:DTSID="{587277E7-A83A-4CAE-A4DB-CAD145C5BDE0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1622,7 +1604,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nivel_tanque"
-              DTS:DTSID="{6E20BD0C-FC53-453F-8D6A-82AEEA85FB7E}"
+              DTS:DTSID="{97396DB8-EADE-474C-8858-676D9282825B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1631,7 +1613,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="kilometraje"
-              DTS:DTSID="{3204E58A-A898-4F49-8C05-D0BC302E8EC8}"
+              DTS:DTSID="{11C9E673-860D-4005-B4F0-F4F783803FCB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1640,7 +1622,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="horometro"
-              DTS:DTSID="{F3D11458-C80C-4720-8957-882040CA0BA2}"
+              DTS:DTSID="{2F8F8A35-082A-4A08-97E3-D35D3F19368B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1649,7 +1631,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_inicial_1"
-              DTS:DTSID="{CC45519A-4A40-4EA0-96EE-A2460B3C548E}"
+              DTS:DTSID="{B571E26F-7A56-46CD-8C0E-7B6976444F92}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1658,7 +1640,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_final_1"
-              DTS:DTSID="{6AA7044B-CB14-441F-9FAF-4A657E55C29A}"
+              DTS:DTSID="{038A2C53-9D7B-4BA9-8872-CAF808699262}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1667,7 +1649,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_despachados"
-              DTS:DTSID="{662AFB02-9F54-4FCE-B07F-790C1AF20484}"
+              DTS:DTSID="{0C074CB3-4C21-4546-B2F4-CF270AB7F3FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1676,7 +1658,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_restantes"
-              DTS:DTSID="{739E54AC-64DB-470D-9AE7-B448F7BFCCE5}"
+              DTS:DTSID="{EA6D35F8-FF6D-4035-94A7-2D2E4BEEF798}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1685,7 +1667,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="total_desachado"
-              DTS:DTSID="{DDF30A61-3FE1-45AA-BA2F-EFAC5DB6B614}"
+              DTS:DTSID="{06F85F77-64E9-4866-B3B5-CE58A77B36CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1694,7 +1676,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="observaciones"
-              DTS:DTSID="{D8E7B7D2-A3AE-4D8E-835E-376014A23C58}"
+              DTS:DTSID="{1D1C3C32-9F9D-46AC-886F-A3A988F96931}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1703,7 +1685,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="empresa"
-              DTS:DTSID="{C7B3EC86-BEB7-4159-910A-B9D23375B4E8}"
+              DTS:DTSID="{85086D99-B214-4C1B-AE69-6D424DFC9D7D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1712,7 +1694,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="efectivo"
-              DTS:DTSID="{3FEEACDD-1BD8-4E2C-8A47-697E9B8BD83D}"
+              DTS:DTSID="{2165453A-2D84-4175-9D7B-664F689D25D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1721,7 +1703,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cobrado"
-              DTS:DTSID="{65A2D30C-66D8-4088-AA67-FDDBF1308F43}"
+              DTS:DTSID="{24104E8F-B068-4775-B9C9-AEBC4232111E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1730,7 +1712,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="revision"
-              DTS:DTSID="{C84C7A3F-3D79-4C6F-91DE-E4DE80C43800}"
+              DTS:DTSID="{83CBFCA2-FB22-4987-BF9F-89819540AA6D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1751,7 +1733,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\salidas combustible UT2.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\salidas\salidas combustible UT2.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1759,7 +1741,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="fecha"
-              DTS:DTSID="{C18D40EE-2491-4E22-9B0D-9ED60EAFDED8}"
+              DTS:DTSID="{46F865E6-AE5E-45DB-8870-6E744FD1C716}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1767,7 +1749,7 @@
               DTS:DataType="21"
               DTS:TextQualified="True"
               DTS:ObjectName="minutos_dia"
-              DTS:DTSID="{005E72D9-3133-4387-BBBF-EAFA31223EB1}"
+              DTS:DTSID="{D02CE7E4-7362-46AE-A225-69044B6F24C1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1776,7 +1758,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="recibo"
-              DTS:DTSID="{511F31A4-567B-4D12-9615-F39687BF82CC}"
+              DTS:DTSID="{D641232A-387B-43B9-A3DB-07251B855E15}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1785,7 +1767,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="equipo"
-              DTS:DTSID="{BCEDDCFB-622C-414D-AE4F-334B8AB8B21A}"
+              DTS:DTSID="{1979563E-5A11-4F73-B9BB-0DA66526981B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1794,7 +1776,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="obra"
-              DTS:DTSID="{E07BD03B-11E4-4138-BF2C-2D2021783D8C}"
+              DTS:DTSID="{1391ADBE-2B24-44CD-A1A7-7082E4AC27F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1803,7 +1785,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nivel_tanque"
-              DTS:DTSID="{7BE668E7-D48D-4083-9413-8B4CC8A92B22}"
+              DTS:DTSID="{74B445A9-AB48-432A-B59E-CE38F1354815}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1812,7 +1794,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="kilometraje"
-              DTS:DTSID="{9E7A4C1D-B41E-46CD-BEC5-D14D8537E2C3}"
+              DTS:DTSID="{6610E219-D11A-4F11-91E8-56F7FC99B2AB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1821,7 +1803,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="horometro"
-              DTS:DTSID="{E7E99594-5325-4BE4-9D8A-4B8FE20822EF}"
+              DTS:DTSID="{038DF2E1-3DF0-45EC-90AC-6A900082A7BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1830,7 +1812,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_inicial_1"
-              DTS:DTSID="{DDF5AE91-D598-4C99-8EB5-3792A9EEFB95}"
+              DTS:DTSID="{7B40C0C5-E853-47A9-941A-4D32C214752B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1839,7 +1821,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_final_1"
-              DTS:DTSID="{99DF7C44-5D35-4BF1-AF9D-0A7E2A742104}"
+              DTS:DTSID="{5CCA3D36-C8AA-4590-A4E2-ED4935A3A61F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1848,7 +1830,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_despachados"
-              DTS:DTSID="{20B9EEC8-88D1-41A6-BCF1-F1CAA46EF3FA}"
+              DTS:DTSID="{A77D7F7C-E532-461D-ADCE-5937FE8DDCB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1857,7 +1839,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_restantes"
-              DTS:DTSID="{998A70EF-9D65-42C5-B135-5FC1BB327E0C}"
+              DTS:DTSID="{DC607F55-256C-413E-9342-E20F35F71A58}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1866,7 +1848,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="total_desachado"
-              DTS:DTSID="{BB06B3A8-2882-4465-B7BD-9EA7B7B08E33}"
+              DTS:DTSID="{3A917C2F-B216-4652-B697-8512F835BE22}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1875,7 +1857,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="observaciones"
-              DTS:DTSID="{425578FD-0203-4B0E-81D4-FD32FF7BBD29}"
+              DTS:DTSID="{9A80B065-314D-4A52-A854-C4F437DA3FB6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1884,7 +1866,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="empresa"
-              DTS:DTSID="{DF3D7F42-58FF-4E0E-94CE-9950412E14D4}"
+              DTS:DTSID="{2DBC663A-2B02-486E-9AA9-CAA0A78EBA2C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1893,7 +1875,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="efectivo"
-              DTS:DTSID="{60C9E2CA-BB53-4973-8E26-2C5D26E032F7}"
+              DTS:DTSID="{B48D370B-A324-45DE-8747-B67FB56E5889}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1902,7 +1884,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cobrado"
-              DTS:DTSID="{105A1B41-9DEC-401D-9423-72522F6BCCD3}"
+              DTS:DTSID="{C8373092-07F1-4159-8E84-13B03DC467EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1911,7 +1893,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="revision"
-              DTS:DTSID="{8D23CADC-C0C7-4BE1-BC0D-98A7712F44CE}"
+              DTS:DTSID="{3644D008-8E63-433A-A73C-35EEE9B8AC7F}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1932,7 +1914,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\salidas combustible UT3.csv">
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\salidas\salidas combustible UT3.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1940,7 +1922,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="fecha"
-              DTS:DTSID="{97A101BD-7F03-49D1-A8AA-890C2C6EC62A}"
+              DTS:DTSID="{3969EEA0-797E-4120-8F21-B0068D17E760}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1948,7 +1930,7 @@
               DTS:DataType="21"
               DTS:TextQualified="True"
               DTS:ObjectName="minutos_dia"
-              DTS:DTSID="{E59E9DFC-9385-4CF1-9887-4F4E04074198}"
+              DTS:DTSID="{C5F33FEC-5231-4FB8-966A-ABEB416BA3EC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1957,7 +1939,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="recibo"
-              DTS:DTSID="{2B700A35-8071-49C6-A236-D354CE0392AD}"
+              DTS:DTSID="{52CA79D6-68B5-4906-923F-7E539F5CED86}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1966,7 +1948,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="equipo"
-              DTS:DTSID="{DD347133-767A-42A5-B37D-DA02B20CB14D}"
+              DTS:DTSID="{FECE88A8-8E89-43D5-AAD2-1C7E457D378D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1975,7 +1957,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="obra"
-              DTS:DTSID="{797F86D2-C913-4E08-A996-FF6101FA7A12}"
+              DTS:DTSID="{8D789E16-1A10-4071-BAD7-6CCCAC2CCA6E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1984,7 +1966,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nivel_tanque"
-              DTS:DTSID="{BF5F46FD-DB4E-418D-94E3-976C980DDDD0}"
+              DTS:DTSID="{9CB24AEB-12B0-4581-A607-F4E6DC9B5425}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1993,7 +1975,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="kilometraje"
-              DTS:DTSID="{2946021D-7CB0-4F49-A243-956442A7F0F0}"
+              DTS:DTSID="{68AAB629-7F08-4D11-8E22-24CB91352D88}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2002,7 +1984,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="horometro"
-              DTS:DTSID="{0BACA111-1186-442F-B11E-AFBAE630381A}"
+              DTS:DTSID="{20173F1E-B4D5-4A0D-97D8-65DB748838B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2011,7 +1993,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_inicial_1"
-              DTS:DTSID="{8DB05DED-2A59-4B48-9356-F8F423C2B241}"
+              DTS:DTSID="{0B374EA5-F404-4962-B353-059B18487FC1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2020,7 +2002,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="contador_final_1"
-              DTS:DTSID="{85B6D2AB-84A6-497C-88EB-7ACA89967AF0}"
+              DTS:DTSID="{A9F39ED3-9607-4D4A-82F0-B5994DCD04CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2029,7 +2011,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_despachados"
-              DTS:DTSID="{995E7B2B-6A3E-4D28-8DBA-2F2E2A501188}"
+              DTS:DTSID="{0A093993-6662-41AD-A8F2-6341BEBA1226}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2038,7 +2020,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="galones_restantes"
-              DTS:DTSID="{31405221-B865-4A5B-91EB-04A229C2DFF0}"
+              DTS:DTSID="{7C850AC4-4B02-4B2C-86A7-20878A376B99}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2047,7 +2029,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="total_desachado"
-              DTS:DTSID="{4DBBA4DA-26F8-4E73-99BE-B0EAC33F2C72}"
+              DTS:DTSID="{4ACC323E-1A31-4614-A44F-1F82A177BE86}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2056,7 +2038,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="observaciones"
-              DTS:DTSID="{19406E7F-C11A-4A66-A11F-7ECB4F89EA5A}"
+              DTS:DTSID="{B9D93A77-F020-4E57-BC91-D274316058AD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2065,7 +2047,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="empresa"
-              DTS:DTSID="{009211C1-B40A-4EA5-B236-F3C24DA46841}"
+              DTS:DTSID="{D26DED33-3A35-4AF7-B2AB-F5101BECA77E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2074,7 +2056,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="efectivo"
-              DTS:DTSID="{2ACE7A65-8C6B-4529-9FE7-CAC3E41CBFF2}"
+              DTS:DTSID="{7753ECBD-DDD7-4F19-94EC-9B6CB07EC06A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2083,7 +2065,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cobrado"
-              DTS:DTSID="{A2266855-B9A7-4EE4-BE88-6055B7B4AACB}"
+              DTS:DTSID="{CF2093B1-308D-4D89-830B-4839A1BC7727}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2092,7 +2074,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="revision"
-              DTS:DTSID="{F58888AA-AB59-4F00-81C4-D29C3E7CDDB1}"
+              DTS:DTSID="{A1ECAC0A-DAD5-487C-ACD0-176005846A89}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -8300,16 +8282,16 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="OBRAS"
-                      externalMetadataColumnId="Package\EXTRAER OBRAS\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[OBRAS]"
+                      externalMetadataColumnId="Package\EXTRAER OBRAS\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Columna derivada.OBRAS]"
                       lineageId="Package\EXTRAER OBRAS\Columna derivada.Outputs[Salida de columna derivada].Columns[OBRAS]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\EXTRAER OBRAS\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[OBRAS]"
+                      refId="Package\EXTRAER OBRAS\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Columna derivada.OBRAS]"
                       dataType="wstr"
                       length="255"
-                      name="OBRAS" />
+                      name="Columna derivada.OBRAS" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -9051,13 +9033,15 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="fecha"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas.Outputs[Salida de columna derivada].Columns[fecha]" />
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[minutos_dia]"
-                      cachedDataType="ui8"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="minutos_dia"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[minutos_dia]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas.Outputs[Salida de columna derivada].Columns[minutos_dia]" />
@@ -9288,16 +9272,6 @@
                       dataType="wstr"
                       length="255"
                       name="revision" />
-                    <externalMetadataColumn
-                      refId="Package\SALIDAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[galones]"
-                      dataType="wstr"
-                      length="255"
-                      name="galones" />
-                    <externalMetadataColumn
-                      refId="Package\SALIDAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[contador1]"
-                      dataType="wstr"
-                      length="255"
-                      name="contador1" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -11127,9 +11101,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas.Outputs[Salida de columna derivada].Columns[fecha]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas.Outputs[Salida de columna derivada].Columns[fecha]"
                       name="fecha"
                       truncationRowDisposition="IgnoreFailure">
@@ -11138,20 +11113,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">[DATEADD]("Day",(((DT_I8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEADD("Day",(((DT_I8)F1) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="FriendlyExpression">F1</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas.Outputs[Salida de columna derivada].Columns[minutos_dia]"
-                      dataType="ui8"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas.Outputs[Salida de columna derivada].Columns[minutos_dia]"
                       name="minutos_dia"
                       truncationRowDisposition="IgnoreFailure">
@@ -11160,13 +11136,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_UI8)(((DT_R8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}) * 24 * 60)</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_UI8)(((DT_R8)F2) * 24 * 60)</property>
+                          name="FriendlyExpression">F2</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -11644,13 +11620,15 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv INARC.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="fecha"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv INARC.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas INARC.Outputs[Salida de columna derivada].Columns[fecha]" />
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv INARC.Inputs[Entrada de destino de archivo plano].Columns[minutos_dia]"
-                      cachedDataType="ui8"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="minutos_dia"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv INARC.Inputs[Entrada de destino de archivo plano].ExternalColumns[minutos_dia]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas INARC.Outputs[Salida de columna derivada].Columns[minutos_dia]" />
@@ -11894,13 +11872,15 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv TP1.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="fecha"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv TP1.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas TP1.Outputs[Salida de columna derivada].Columns[fecha]" />
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv TP1.Inputs[Entrada de destino de archivo plano].Columns[minutos_dia]"
-                      cachedDataType="ui8"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="minutos_dia"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv TP1.Inputs[Entrada de destino de archivo plano].ExternalColumns[minutos_dia]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas TP1.Outputs[Salida de columna derivada].Columns[minutos_dia]" />
@@ -12144,13 +12124,15 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv TP2.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="fecha"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv TP2.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas TP2.Outputs[Salida de columna derivada].Columns[fecha]" />
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv TP2.Inputs[Entrada de destino de archivo plano].Columns[minutos_dia]"
-                      cachedDataType="ui8"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="minutos_dia"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv TP2.Inputs[Entrada de destino de archivo plano].ExternalColumns[minutos_dia]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas TP2.Outputs[Salida de columna derivada].Columns[minutos_dia]" />
@@ -12394,13 +12376,15 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv ut1.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="fecha"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv ut1.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut1.Outputs[Salida de columna derivada].Columns[fecha]" />
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv ut1.Inputs[Entrada de destino de archivo plano].Columns[minutos_dia]"
-                      cachedDataType="ui8"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="minutos_dia"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv ut1.Inputs[Entrada de destino de archivo plano].ExternalColumns[minutos_dia]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut1.Outputs[Salida de columna derivada].Columns[minutos_dia]" />
@@ -12644,13 +12628,15 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv ut2.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="fecha"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv ut2.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut2.Outputs[Salida de columna derivada].Columns[fecha]" />
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv ut2.Inputs[Entrada de destino de archivo plano].Columns[minutos_dia]"
-                      cachedDataType="ui8"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="minutos_dia"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv ut2.Inputs[Entrada de destino de archivo plano].ExternalColumns[minutos_dia]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut2.Outputs[Salida de columna derivada].Columns[minutos_dia]" />
@@ -12894,13 +12880,15 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv ut3.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="fecha"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv ut3.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut3.Outputs[Salida de columna derivada].Columns[fecha]" />
                     <inputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas csv ut3.Inputs[Entrada de destino de archivo plano].Columns[minutos_dia]"
-                      cachedDataType="ui8"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="minutos_dia"
                       externalMetadataColumnId="Package\SALIDAS COMBUSTIBLE\salidas csv ut3.Inputs[Entrada de destino de archivo plano].ExternalColumns[minutos_dia]"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut3.Outputs[Salida de columna derivada].Columns[minutos_dia]" />
@@ -13246,9 +13234,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas INARC.Outputs[Salida de columna derivada].Columns[fecha]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas INARC.Outputs[Salida de columna derivada].Columns[fecha]"
                       name="fecha"
                       truncationRowDisposition="IgnoreFailure">
@@ -13257,20 +13246,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">[DATEADD]("Day",(((DT_I8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEADD("Day",(((DT_I8)F1) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="FriendlyExpression">F1</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas INARC.Outputs[Salida de columna derivada].Columns[minutos_dia]"
-                      dataType="ui8"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas INARC.Outputs[Salida de columna derivada].Columns[minutos_dia]"
                       name="minutos_dia"
                       truncationRowDisposition="IgnoreFailure">
@@ -13279,13 +13269,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_UI8)(((DT_R8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}) * 24 * 60)</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_UI8)(((DT_R8)F2) * 24 * 60)</property>
+                          name="FriendlyExpression">F2</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -13819,9 +13809,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas TP1.Outputs[Salida de columna derivada].Columns[fecha]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas TP1.Outputs[Salida de columna derivada].Columns[fecha]"
                       name="fecha"
                       truncationRowDisposition="IgnoreFailure">
@@ -13830,20 +13821,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">[DATEADD]("Day",(((DT_I8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEADD("Day",(((DT_I8)F1) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="FriendlyExpression">F1</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas TP1.Outputs[Salida de columna derivada].Columns[minutos_dia]"
-                      dataType="ui8"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas TP1.Outputs[Salida de columna derivada].Columns[minutos_dia]"
                       name="minutos_dia"
                       truncationRowDisposition="IgnoreFailure">
@@ -13852,13 +13844,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_UI8)(((DT_R8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}) * 24 * 60)</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_UI8)(((DT_R8)F2) * 24 * 60)</property>
+                          name="FriendlyExpression">F2</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -14392,9 +14384,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas TP2.Outputs[Salida de columna derivada].Columns[fecha]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas TP2.Outputs[Salida de columna derivada].Columns[fecha]"
                       name="fecha"
                       truncationRowDisposition="IgnoreFailure">
@@ -14403,20 +14396,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">[DATEADD]("Day",(((DT_I8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEADD("Day",(((DT_I8)F1) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="FriendlyExpression">F1</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas TP2.Outputs[Salida de columna derivada].Columns[minutos_dia]"
-                      dataType="ui8"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas TP2.Outputs[Salida de columna derivada].Columns[minutos_dia]"
                       name="minutos_dia"
                       truncationRowDisposition="IgnoreFailure">
@@ -14425,13 +14419,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_UI8)(((DT_R8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}) * 24 * 60)</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_UI8)(((DT_R8)F2) * 24 * 60)</property>
+                          name="FriendlyExpression">F2</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -14965,9 +14959,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas ut1.Outputs[Salida de columna derivada].Columns[fecha]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut1.Outputs[Salida de columna derivada].Columns[fecha]"
                       name="fecha"
                       truncationRowDisposition="IgnoreFailure">
@@ -14976,20 +14971,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">[DATEADD]("Day",(((DT_I8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEADD("Day",(((DT_I8)F1) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="FriendlyExpression">F1</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas ut1.Outputs[Salida de columna derivada].Columns[minutos_dia]"
-                      dataType="ui8"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut1.Outputs[Salida de columna derivada].Columns[minutos_dia]"
                       name="minutos_dia"
                       truncationRowDisposition="IgnoreFailure">
@@ -14998,13 +14994,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_UI8)(((DT_R8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}) * 24 * 60)</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_UI8)(((DT_R8)F2) * 24 * 60)</property>
+                          name="FriendlyExpression">F2</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -15538,9 +15534,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas ut2.Outputs[Salida de columna derivada].Columns[fecha]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut2.Outputs[Salida de columna derivada].Columns[fecha]"
                       name="fecha"
                       truncationRowDisposition="IgnoreFailure">
@@ -15549,20 +15546,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">[DATEADD]("Day",(((DT_I8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEADD("Day",(((DT_I8)F1) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="FriendlyExpression">F1</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas ut2.Outputs[Salida de columna derivada].Columns[minutos_dia]"
-                      dataType="ui8"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut2.Outputs[Salida de columna derivada].Columns[minutos_dia]"
                       name="minutos_dia"
                       truncationRowDisposition="IgnoreFailure">
@@ -15571,13 +15569,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_UI8)(((DT_R8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}) * 24 * 60)</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_UI8)(((DT_R8)F2) * 24 * 60)</property>
+                          name="FriendlyExpression">F2</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -16111,9 +16109,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas ut3.Outputs[Salida de columna derivada].Columns[fecha]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut3.Outputs[Salida de columna derivada].Columns[fecha]"
                       name="fecha"
                       truncationRowDisposition="IgnoreFailure">
@@ -16122,20 +16121,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">[DATEADD]("Day",(((DT_I8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F1]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEADD("Day",(((DT_I8)F1) - 1),(DT_DBTIMESTAMP)"1899-12-31")</property>
+                          name="FriendlyExpression">F1</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\SALIDAS COMBUSTIBLE\salidas ut3.Outputs[Salida de columna derivada].Columns[minutos_dia]"
-                      dataType="ui8"
+                      dataType="wstr"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="IgnoreFailure"
+                      length="255"
                       lineageId="Package\SALIDAS COMBUSTIBLE\salidas ut3.Outputs[Salida de columna derivada].Columns[minutos_dia]"
                       name="minutos_dia"
                       truncationRowDisposition="IgnoreFailure">
@@ -16144,13 +16144,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_UI8)(((DT_R8)#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}) * 24 * 60)</property>
+                          name="Expression">#{Package\SALIDAS COMBUSTIBLE\Origen de Excel.Outputs[Salida de origen de Excel].Columns[F2]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_UI8)(((DT_R8)F2) * 24 * 60)</property>
+                          name="FriendlyExpression">F2</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -17329,7 +17329,7 @@
         <NodeLayout
           Size="192,41.6"
           Id="Package\SALIDAS COMBUSTIBLE"
-          TopLeft="88.0000014986306,283.946222469633" />
+          TopLeft="87.4285729174707,274.769751752702" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="179.91428737835,104.611765589599">
@@ -17376,18 +17376,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
-          TopLeft="184.228572883411,243.341178761386">
+          TopLeft="183.942858592831,243.341178761386">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.6050437082471"
+              EndConnector="0,31.4285729913153"
               Start="0,0"
-              End="0,33.1050437082471">
+              End="0,23.9285729913153">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.1050437082471" />
+                    End="0,23.9285729913153" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17820,7 +17820,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-13.7201025296462,5,167.5755859375,10.3349609375"
+              BoundingBox="-13.720102529646,5,167.5755859375,10.3349609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17844,7 +17844,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-7.98676919631139,5,167.5755859375,10.3349609375"
+              BoundingBox="-7.98676919631153,5,167.5755859375,10.3349609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17892,7 +17892,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="4.21323080368698,5,167.5755859375,10.3349609375"
+              BoundingBox="4.21323080368697,5,167.5755859375,10.3349609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17928,7 +17928,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-12.2367691963131,20.5726497962665,167.5755859375,10.3349609375"
+              BoundingBox="-12.236769196313,20.5726497962665,167.5755859375,10.3349609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17952,7 +17952,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="62.0132308036869,5,167.5755859375,10.3349609375"
+              BoundingBox="62.013230803687,5,167.5755859375,10.3349609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17976,7 +17976,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="62.0132308036871,5,167.5755859375,10.3349609375"
+              BoundingBox="62.013230803687,5,167.5755859375,10.3349609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18226,7 +18226,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-58.3788521001868,41.6630313848085,86.30328125,11.0625"
+              BoundingBox="-58.3788521001869,41.6630313848085,86.30328125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18322,7 +18322,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-43.151640625,37.4649694066559,86.30328125,11.0625"
+              BoundingBox="-43.151640625,37.464969406656,86.30328125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18418,7 +18418,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="57.6787073699608,42.0210687983417,56.0766015625,11.0625"
+              BoundingBox="57.678707369961,42.0210687983417,56.0766015625,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18454,7 +18454,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="57.8120407032942,42.0354050841808,56.0766015625,11.0625"
+              BoundingBox="57.812040703294,42.0354050841808,56.0766015625,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18490,7 +18490,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="59.2787073699623,31.43784299189,56.0766015625,11.0625"
+              BoundingBox="59.2787073699625,31.43784299189,56.0766015625,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18562,7 +18562,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="7.54537403662751,47.3831942027007,56.0766015625,11.0625"
+              BoundingBox="7.5453740366275,47.3831942027007,56.0766015625,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18634,7 +18634,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="57.6787073699609,42.0210687983416,56.0766015625,11.0625"
+              BoundingBox="57.678707369961,42.0210687983416,56.0766015625,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18803,9 +18803,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18827,9 +18825,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18851,9 +18847,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18876,7 +18870,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-21.54123046875,7.04999999999995,25.804140625,9.7490234375"
+              BoundingBox="-12.9020703125,10.1754882812499,25.804140625,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -19310,102 +19304,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
-          TopLeft="1917.99729673387,217.679920351702">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="139.902047544874,0"
-              Start="0,0"
-              End="132.402047544874,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="132.402047544874,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-17.586769196313,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
-          TopLeft="1035.8598669484,205.944161807495">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="147.902047544872,0"
-              Start="0,0"
-              End="140.402047544872,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="140.402047544872,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-13.586769196314,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
-          TopLeft="594.193200281735,196.859010295288">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="134.568714211541,0"
-              Start="0,0"
-              End="127.068714211541,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="127.068714211541,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-20.2534358629795,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional6]"
-          TopLeft="1186.21861332608,688.333854850407">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.702047544879,0"
-              Start="0,0"
-              End="145.202047544879,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="145.202047544879,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-11.1867691963105,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
           TopLeft="181.926533615068,197.840525449748">
           <EdgeLayout.Curve>
@@ -19426,6 +19324,30 @@
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-14.1201025296465,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
+          TopLeft="1482.63764472618,230.545653403477">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="133.616333015871,0"
+              Start="0,0"
+              End="126.116333015871,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="126.116333015871,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.7296264608145,5,167.5755859375,10.3349609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -19454,27 +19376,209 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
-          TopLeft="1482.63764472618,230.545653403477">
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
+          TopLeft="1035.8598669484,205.944161807495">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="133.616333015871,0"
+              EndConnector="147.902047544872,0"
               Start="0,0"
-              End="126.116333015871,0">
+              End="140.402047544872,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="126.116333015871,0" />
+                    End="140.402047544872,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-20.7296264608145,5,167.5755859375,10.3349609375"
+              BoundingBox="-13.586769196314,5,167.5755859375,10.3349609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional6]"
+          TopLeft="1186.21861332608,688.333854850407">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.702047544879,0"
+              Start="0,0"
+              End="145.202047544879,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="145.202047544879,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-11.1867691963105,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
+          TopLeft="594.193200281735,196.859010295288">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134.568714211541,0"
+              Start="0,0"
+              End="127.068714211541,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="127.068714211541,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.2534358629795,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
+          TopLeft="1917.99729673387,217.679920351702">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="139.902047544874,0"
+              Start="0,0"
+              End="132.402047544874,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="132.402047544874,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-17.586769196313,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
+          TopLeft="650.546941625411,343.521943960956">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.207651995695"
+              Start="0,0"
+              End="0,52.707651995695">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.707651995695" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada]"
+          TopLeft="1261.90568800309,843.885677404966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.2076519956941"
+              Start="0,0"
+              End="0,44.7076519956941">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.7076519956941" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
+          TopLeft="1105.54694162541,361.495984362052">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.2076519956947"
+              Start="0,0"
+              End="0,44.7076519956947">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.7076519956947" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada3]"
+          TopLeft="261.302497180967,352.94790355986">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.8743186623623"
+              Start="0,0"
+              End="0,39.3743186623623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3743186623623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
+          TopLeft="505.715198934766,847.617550015185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.2076519956941"
+              Start="0,0"
+              End="0,44.7076519956941">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.7076519956941" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19522,224 +19626,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
-          TopLeft="505.715198934766,847.617550015185">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.2076519956941"
-              Start="0,0"
-              End="0,44.7076519956941">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.7076519956941" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada3]"
-          TopLeft="261.302497180967,352.94790355986">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.8743186623623"
-              Start="0,0"
-              End="0,39.3743186623623">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.3743186623623" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
-          TopLeft="1105.54694162541,361.495984362052">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.2076519956947"
-              Start="0,0"
-              End="0,44.7076519956947">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.7076519956947" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada]"
-          TopLeft="1261.90568800309,843.885677404966">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.2076519956941"
-              Start="0,0"
-              End="0,44.7076519956941">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.7076519956941" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
-          TopLeft="650.546941625411,343.521943960956">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.2076519956947"
-              Start="0,0"
-              End="0,52.7076519956947">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.7076519956947" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
-          TopLeft="528.326533615068,215.288888888888">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-51.6988673948182,88.7813277022001"
-              Start="0,0"
-              End="-51.6988673948182,81.2813277022001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.3448560280881" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.3448560280881"
-                    Point2="0,36.3448560280881"
-                    Point3="-4,36.3448560280881" />
-                  <mssgle:LineSegment
-                    End="-47.6988673948182,36.3448560280881" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.6988673948182,36.3448560280881"
-                    Point2="-51.6988673948182,36.3448560280881"
-                    Point3="-51.6988673948182,40.3448560280881" />
-                  <mssgle:LineSegment
-                    End="-51.6988673948182,81.2813277022001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-69.0010743224091,41.3448560280881,86.30328125,11.0625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
-          TopLeft="1123.55194665941,707.652622332896">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-70.6322007281433,87.8924388133131"
-              Start="0,0"
-              End="-70.6322007281433,80.3924388133131">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.0214913169316" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.0214913169316"
-                    Point2="0,36.0214913169316"
-                    Point3="-4,36.0214913169316" />
-                  <mssgle:LineSegment
-                    End="-66.6322007281433,36.0214913169316" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-66.6322007281433,36.0214913169316"
-                    Point2="-70.6322007281433,36.0214913169316"
-                    Point3="-70.6322007281433,40.0214913169316" />
-                  <mssgle:LineSegment
-                    End="-70.6322007281433,80.3924388133131" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-78.4677409890717,41.0214913169316,86.30328125,11.0625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
-          TopLeft="969.993200281735,225.262929289984">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-46.3655336073541,87.892438813311"
-              Start="0,0"
-              End="-46.3655336073541,80.392438813311">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.9809671391992" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.9809671391992"
-                    Point2="0,35.9809671391992"
-                    Point3="-4,35.9809671391992" />
-                  <mssgle:LineSegment
-                    End="-42.3655336073541,35.9809671391992" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-42.3655336073541,35.9809671391992"
-                    Point2="-46.3655336073541,35.9809671391992"
-                    Point3="-46.3655336073541,39.9809671391992" />
-                  <mssgle:LineSegment
-                    End="-46.3655336073541,80.392438813311" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-66.3344074286771,40.9809671391992,86.30328125,11.0625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco]"
           TopLeft="367.361457591084,711.384494943116">
           <EdgeLayout.Curve>
@@ -19772,6 +19658,42 @@
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-78.4677409890716,41.0214913169315,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
+          TopLeft="1846.79729673387,236.998687834191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-68.4988673948178,87.8924388133124"
+              Start="0,0"
+              End="-68.4988673948178,80.3924388133124">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.9212576019624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.9212576019624"
+                    Point2="0,35.9212576019624"
+                    Point3="-4,35.9212576019624" />
+                  <mssgle:LineSegment
+                    End="-64.4988673948178,35.9212576019624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-64.4988673948178,35.9212576019624"
+                    Point2="-68.4988673948178,35.9212576019624"
+                    Point3="-68.4988673948178,39.9212576019624" />
+                  <mssgle:LineSegment
+                    End="-68.4988673948178,80.3924388133124" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-77.4010743224089,40.9212576019624,86.30328125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -19836,38 +19758,110 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
-          TopLeft="1846.79729673387,236.998687834191">
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
+          TopLeft="969.993200281735,225.262929289984">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-68.4988673948178,87.8924388133124"
+              EndConnector="-46.3655336073541,87.892438813311"
               Start="0,0"
-              End="-68.4988673948178,80.3924388133124">
+              End="-46.3655336073541,80.392438813311">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.9212576019624" />
+                    End="0,31.9809671391992" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.9212576019624"
-                    Point2="0,35.9212576019624"
-                    Point3="-4,35.9212576019624" />
+                    Point1="0,31.9809671391992"
+                    Point2="0,35.9809671391992"
+                    Point3="-4,35.9809671391992" />
                   <mssgle:LineSegment
-                    End="-64.4988673948178,35.9212576019624" />
+                    End="-42.3655336073541,35.9809671391992" />
                   <mssgle:CubicBezierSegment
-                    Point1="-64.4988673948178,35.9212576019624"
-                    Point2="-68.4988673948178,35.9212576019624"
-                    Point3="-68.4988673948178,39.9212576019624" />
+                    Point1="-42.3655336073541,35.9809671391992"
+                    Point2="-46.3655336073541,35.9809671391992"
+                    Point3="-46.3655336073541,39.9809671391992" />
                   <mssgle:LineSegment
-                    End="-68.4988673948178,80.3924388133124" />
+                    End="-46.3655336073541,80.392438813311" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-77.4010743224089,40.9212576019624,86.30328125,11.0625"
+              BoundingBox="-66.3344074286771,40.9809671391992,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
+          TopLeft="1123.55194665941,707.652622332896">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-70.6322007281433,87.8924388133131"
+              Start="0,0"
+              End="-70.6322007281433,80.3924388133131">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.0214913169316" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.0214913169316"
+                    Point2="0,36.0214913169316"
+                    Point3="-4,36.0214913169316" />
+                  <mssgle:LineSegment
+                    End="-66.6322007281433,36.0214913169316" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-66.6322007281433,36.0214913169316"
+                    Point2="-70.6322007281433,36.0214913169316"
+                    Point3="-70.6322007281433,40.0214913169316" />
+                  <mssgle:LineSegment
+                    End="-70.6322007281433,80.3924388133131" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-78.4677409890717,41.0214913169316,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
+          TopLeft="528.326533615068,215.288888888888">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-51.6988673948182,88.7813277022001"
+              Start="0,0"
+              End="-51.6988673948182,81.2813277022001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.3448560280881" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.3448560280881"
+                    Point2="0,36.3448560280881"
+                    Point3="-4,36.3448560280881" />
+                  <mssgle:LineSegment
+                    End="-47.6988673948182,36.3448560280881" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47.6988673948182,36.3448560280881"
+                    Point2="-51.6988673948182,36.3448560280881"
+                    Point3="-51.6988673948182,40.3448560280881" />
+                  <mssgle:LineSegment
+                    End="-51.6988673948182,81.2813277022001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-69.0010743224091,41.3448560280881,86.30328125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
