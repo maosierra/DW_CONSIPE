@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Administrador de conexiones con Excel"
+  DTS:DTSID="{2EC02AB3-BA64-4F06-8220-200112C31394}"
+  DTS:CreationName="EXCEL">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\fidod\Downloads\GL-FT-011 Control  de Combustibles 2021\GL-FT-011 Control  de Combustibles 2021.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=NO&quot;;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
