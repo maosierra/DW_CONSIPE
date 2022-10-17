@@ -5,14 +5,14 @@
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="DESKTOP-HOME"
   DTS:CreatorName="DESKTOP-HOME\fidod"
-  DTS:DTSID="{8D167A48-4AA0-4812-8910-B001240E0F69}"
+  DTS:DTSID="{7AD66681-823B-4D6F-8AE5-3CEC0B129C6C}"
   DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="11.0.7001.0"
   DTS:LocaleID="9226"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="ETL combustible"
   DTS:PackageType="5"
-  DTS:VersionBuild="99"
-  DTS:VersionGUID="{1B9C3D99-2CF1-4A24-971A-641C5CBF17C6}">
+  DTS:VersionBuild="101"
+  DTS:VersionGUID="{F29F70F0-0C6A-4EBB-9564-853D60C3B0AC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,6 +21,8 @@
       DTS:CreationName="EXCEL"
       DTS:DTSID="{71407301-BB96-4BDE-8720-AB60BA53FFF3}"
       DTS:ObjectName="Conexion archivo combustible">
+      <DTS:PropertyExpression
+        DTS:Name="ServerName">@[User::folder_raiz]+ @[User::folder_excel]+"\\GL-FT-011 Control  de Combustibles 2021.xlsx"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\CONSIPE FILES\REPORTE COMBUSTIBLE\GL-FT-011 Control  de Combustibles 2021.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
@@ -2081,7 +2083,26 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{43ECDEBD-6B47-4FDC-85ED-623E6EC6EEE0}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="folder_excel">
+      <DTS:VariableValue
+        DTS:DataType="8">\REPORTE COMBUSTIBLE</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4EE0A76F-7969-4D3A-9366-8C77B3E0F227}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="folder_raiz">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\CONSIPE FILES</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\CARGAR"
@@ -7268,54 +7289,54 @@
                   startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT2.Outputs[celdas_valor]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco6]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS TP1.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\TP1.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS UT2.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT2.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCO INARC.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\INARC.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS TP2.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\TP2.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS UT3.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT3.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\Multidifusión.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADA SP1.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
                   endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS UT1.Inputs[Entrada de Multidifusión 1]"
                   name="celda_texto_blanco"
                   startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT1.Outputs[celda_texto_blanco]" />
                 <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\Multidifusión.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADA SP1.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS UT3.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT3.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS UT2.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT2.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCO INARC.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\INARC.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS TP1.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\TP1.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\BLANCOS TP2.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\TP2.Outputs[celda_texto_blanco]" />
+                <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV UT3.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV UT2.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS UT3.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS UT2.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada6]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV INARC.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV TP1.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS INARC.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS TP1.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV UT1.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\Columna derivada.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS UT1.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada3]"
                   endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV TP2.Inputs[Entrada de destino de archivo plano]"
@@ -7323,54 +7344,54 @@
                   startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS TP2.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV UT1.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS UT1.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\Columna derivada.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV UT2.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV INARC.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS UT2.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS INARC.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV TP1.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\CSV UT3.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS TP1.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADAS UT3.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional6]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES INARC.Inputs[Entrada de Multidifusión 1]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\Multidifusión 2.Inputs[Entrada de Multidifusión 1]"
                   name="Salida de error de división condicional"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\INARC.Outputs[Salida de error de división condicional]" />
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADA SP1.Outputs[Salida de error de división condicional]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES UT2.Inputs[Entrada de Multidifusión 1]"
-                  name="Salida de error de división condicional"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT2.Outputs[Salida de error de división condicional]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES UT3.Inputs[Entrada de Multidifusión 1]"
-                  name="Salida de error de división condicional"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT3.Outputs[Salida de error de división condicional]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES UT1.Inputs[Entrada de Multidifusión 1]"
-                  name="Salida de error de división condicional"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT1.Outputs[Salida de error de división condicional]" />
-                <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
                   endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES TP1.Inputs[Entrada de Multidifusión 1]"
                   name="Salida de error de división condicional"
                   startId="Package\Extraer\ENTRADAS COMBUSTIBLE\TP1.Outputs[Salida de error de división condicional]" />
                 <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES UT1.Inputs[Entrada de Multidifusión 1]"
+                  name="Salida de error de división condicional"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT1.Outputs[Salida de error de división condicional]" />
+                <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
                   endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES TP2.Inputs[Entrada de Multidifusión 1]"
                   name="Salida de error de división condicional"
                   startId="Package\Extraer\ENTRADAS COMBUSTIBLE\TP2.Outputs[Salida de error de división condicional]" />
                 <path
-                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
-                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\Multidifusión 2.Inputs[Entrada de Multidifusión 1]"
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES UT2.Inputs[Entrada de Multidifusión 1]"
                   name="Salida de error de división condicional"
-                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\ENTRADA SP1.Outputs[Salida de error de división condicional]" />
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT2.Outputs[Salida de error de división condicional]" />
+                <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES INARC.Inputs[Entrada de Multidifusión 1]"
+                  name="Salida de error de división condicional"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\INARC.Outputs[Salida de error de división condicional]" />
+                <path
+                  refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
+                  endId="Package\Extraer\ENTRADAS COMBUSTIBLE\ERRORES UT3.Inputs[Entrada de Multidifusión 1]"
+                  name="Salida de error de división condicional"
+                  startId="Package\Extraer\ENTRADAS COMBUSTIBLE\UT3.Outputs[Salida de error de división condicional]" />
                 <path
                   refId="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de multidifusión 1]"
                   endId="Package\Extraer\ENTRADAS COMBUSTIBLE\INARC.Inputs[Entrada de división condicional]"
@@ -17149,54 +17170,54 @@
                   startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP2.Outputs[celdas_valor]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco6]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos TP1.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP1.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos INARC.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\INARC.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\SURTIDOR 1.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos TP2.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP2.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos ut2.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 2.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos ut1.Inputs[Entrada de Multidifusión 1]"
-                  name="celda_texto_blanco"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 1.Outputs[celda_texto_blanco]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
                   endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos ut3.Inputs[Entrada de Multidifusión 1]"
                   name="celda_texto_blanco"
                   startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 3.Outputs[celda_texto_blanco]" />
                 <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos ut1.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 1.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos ut2.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 2.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos INARC.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\INARC.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\SURTIDOR 1.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos TP1.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP1.Outputs[celda_texto_blanco]" />
+                <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos TP2.Inputs[Entrada de Multidifusión 1]"
+                  name="celda_texto_blanco"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP2.Outputs[celda_texto_blanco]" />
+                <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv TP2.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv INARC.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas TP2.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas INARC.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada6]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut1.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut3.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas ut1.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas ut3.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut2.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv TP1.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas ut2.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas TP1.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada3]"
                   endId="Package\Extraer\SALIDAS COMBUSTIBLE\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
@@ -17204,54 +17225,54 @@
                   startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv TP1.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut2.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas TP1.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas ut2.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv INARC.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut1.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas INARC.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas ut1.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut3.Inputs[Entrada de destino de archivo plano]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv TP2.Inputs[Entrada de destino de archivo plano]"
                   name="Salida de columna derivada"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas ut3.Outputs[Salida de columna derivada]" />
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\salidas TP2.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional6]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores s1.Inputs[Entrada de Multidifusión 1]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores TP2.Inputs[Entrada de Multidifusión 1]"
                   name="Salida de error de división condicional"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\SURTIDOR 1.Outputs[Salida de error de división condicional]" />
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP2.Outputs[Salida de error de división condicional]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores TP1.Inputs[Entrada de Multidifusión 1]"
-                  name="Salida de error de división condicional"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP1.Outputs[Salida de error de división condicional]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores ut2.Inputs[Entrada de Multidifusión 1]"
-                  name="Salida de error de división condicional"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 2.Outputs[Salida de error de división condicional]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores ut3.Inputs[Entrada de Multidifusión 1]"
-                  name="Salida de error de división condicional"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 3.Outputs[Salida de error de división condicional]" />
-                <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
                   endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores ut1.Inputs[Entrada de Multidifusión 1]"
                   name="Salida de error de división condicional"
                   startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 1.Outputs[Salida de error de división condicional]" />
                 <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores ut3.Inputs[Entrada de Multidifusión 1]"
+                  name="Salida de error de división condicional"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 3.Outputs[Salida de error de división condicional]" />
+                <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
                   endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores INARC.Inputs[Entrada de Multidifusión 1]"
                   name="Salida de error de división condicional"
                   startId="Package\Extraer\SALIDAS COMBUSTIBLE\INARC.Outputs[Salida de error de división condicional]" />
                 <path
-                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
-                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores TP2.Inputs[Entrada de Multidifusión 1]"
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores TP1.Inputs[Entrada de Multidifusión 1]"
                   name="Salida de error de división condicional"
-                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP2.Outputs[Salida de error de división condicional]" />
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\TP1.Outputs[Salida de error de división condicional]" />
+                <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores s1.Inputs[Entrada de Multidifusión 1]"
+                  name="Salida de error de división condicional"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\SURTIDOR 1.Outputs[Salida de error de división condicional]" />
+                <path
+                  refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
+                  endId="Package\Extraer\SALIDAS COMBUSTIBLE\errores ut2.Inputs[Entrada de Multidifusión 1]"
+                  name="Salida de error de división condicional"
+                  startId="Package\Extraer\SALIDAS COMBUSTIBLE\UT 2.Outputs[Salida de error de división condicional]" />
                 <path
                   refId="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de Multidifusión 1]"
                   endId="Package\Extraer\SALIDAS COMBUSTIBLE\SURTIDOR 1.Inputs[Entrada de división condicional]"
@@ -17335,13 +17356,13 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Transformar\Tarea Flujo de datos"
+          DTS:refId="Package\Transformar\TRANSFORMAR EQUIPOS"
           DTS:CreationName="SSIS.Pipeline.3"
           DTS:Description="Tarea Flujo de datos"
           DTS:DTSID="{A614730B-156D-4473-B32D-2817F51C0B49}"
           DTS:ExecutableType="SSIS.Pipeline.3"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Tarea Flujo de datos"
+          DTS:ObjectName="TRANSFORMAR EQUIPOS"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -17382,17 +17403,17 @@
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Transformar\Tarea Flujo de datos"
-          TopLeft="49.9428647917144,15.7647076068865" />
         <ContainerLayout
-          HeaderHeight="43.2"
+          HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="293.6,240.8"
-          Size="293.6,43.2"
-          Id="Package\Transformar"
-          TopLeft="500.469396278046,47.8268895309279" />
+          PanelSize="283.2,236.8"
+          Size="283.2,43.2"
+          Id="Package\CARGAR"
+          TopLeft="910.952396465808,47.3137107687424" />
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE"
+          TopLeft="44.8000074250354,179.058830135834" />
         <NodeLayout
           Size="169.6,41.6"
           Id="Package\Extraer\EXTRAER EQUIPOS"
@@ -17401,10 +17422,6 @@
           Size="159.2,41.6"
           Id="Package\Extraer\EXTRAER OBRAS"
           TopLeft="60.2285791163544,94.1647118367126" />
-        <NodeLayout
-          Size="203.2,41.6"
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE"
-          TopLeft="44.8000074250354,179.058830135834" />
         <NodeLayout
           Size="192,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE"
@@ -17477,25 +17494,36 @@
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="False"
+          IsExpanded="True"
           PanelSize="304.8,331.2"
-          Size="304.8,43.2"
+          Size="304.8,374.4"
           Id="Package\Extraer"
           TopLeft="93.4285730196508,42.92184472876" />
+        <NodeLayout
+          Size="200,41.6"
+          Id="Package\Transformar\TRANSFORMAR EQUIPOS"
+          TopLeft="50.7591913362286,4.40336290973281" />
+        <ContainerLayout
+          HeaderHeight="43.2"
+          IsExpanded="True"
+          PanelSize="293.6,322.4"
+          Size="293.6,365.6"
+          Id="Package\Transformar"
+          TopLeft="501.28572282256,48.7008391230167" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="398.228573019651,66.974367129844">
+          TopLeft="398.228573019651,230.811341925888">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="102.240823258395,0"
+              EndConnector="103.057149802909,0"
               Start="0,0"
-              End="94.740823258395,0">
+              End="95.5571498029093,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="94.740823258395,0" />
+                    End="95.5571498029093,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17504,27 +17532,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="283.2,236.8"
-          Size="283.2,43.2"
-          Id="Package\CARGAR"
-          TopLeft="910.952396465808,47.3137107687424" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="794.069396278046,69.1703001498352">
+          TopLeft="794.88572282256,231.500839123017">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="116.883000187762,0"
+              EndConnector="116.066673643248,-162.587128354274"
               Start="0,0"
-              End="109.383000187762,0">
+              End="108.566673643248,-162.587128354274">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="109.383000187762,0" />
+                    End="54.033336821624,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.033336821624,0"
+                    Point2="58.033336821624,0"
+                    Point3="58.033336821624,-4" />
+                  <mssgle:LineSegment
+                    End="58.033336821624,-158.587128354274" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.033336821624,-158.587128354274"
+                    Point2="58.033336821624,-162.587128354274"
+                    Point3="62.033336821624,-162.587128354274" />
+                  <mssgle:LineSegment
+                    End="108.566673643248,-162.587128354274" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17938,7 +17971,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional6]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
           TopLeft="782.987756283707,450.170314692901">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -17962,7 +17995,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
           TopLeft="112.054422950374,479.381232517511">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -17986,7 +18019,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
           TopLeft="167.787756283707,812.825773605206">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18010,7 +18043,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
           TopLeft="799.787756283707,147.670314692901">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18034,7 +18067,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional6]"
           TopLeft="134.987756283707,182.816807985141">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18070,7 +18103,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
           TopLeft="737.298867394818,757.503648026234">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18094,7 +18127,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
           TopLeft="528.943311839262,1140.7701214064">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18118,7 +18151,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada6]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
           TopLeft="916.169618252098,601.188803914124">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18140,7 +18173,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada]"
           TopLeft="938.79184047432,298.188803914124">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18162,7 +18195,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
           TopLeft="174.39184047432,339.583196390542">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18218,7 +18251,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
           TopLeft="249.858507140989,628.499721738734">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18240,7 +18273,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
           TopLeft="303.99184047432,963.444262826429">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18262,7 +18295,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada6]"
           TopLeft="875.666217030573,908.522137247458">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18296,7 +18329,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco6]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco]"
           TopLeft="674.632200728152,776.555748842056">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18332,7 +18365,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
           TopLeft="104.054422950374,831.477874421028">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18368,7 +18401,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
           TopLeft="711.787756283707,469.222415508723">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18404,7 +18437,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco6]"
           TopLeft="48.3210896170403,498.933333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18440,7 +18473,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
           TopLeft="734.327211475187,166.222415508723">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18464,7 +18497,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
           TopLeft="466.276645172596,1159.82222222222">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18500,7 +18533,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco]"
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
           TopLeft="67.8938781418535,182.816807985141">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19441,7 +19474,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional6]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
           TopLeft="181.926533615068,197.840525449748">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19465,7 +19498,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
           TopLeft="1482.63764472618,230.545653403477">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19489,7 +19522,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
           TopLeft="430.028124257751,692.065727460627">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19513,7 +19546,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
           TopLeft="1035.8598669484,205.944161807495">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19537,7 +19570,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional6]"
           TopLeft="1186.21861332608,688.333854850407">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19561,7 +19594,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
           TopLeft="594.193200281735,196.859010295288">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19585,7 +19618,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
           TopLeft="1917.99729673387,217.679920351702">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19609,7 +19642,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada6]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
           TopLeft="650.546941625411,343.521943960956">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19631,7 +19664,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada]"
           TopLeft="1261.90568800309,843.885677404966">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19653,7 +19686,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
           TopLeft="1105.54694162541,361.495984362052">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19697,7 +19730,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
           TopLeft="505.715198934766,847.617550015185">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19719,7 +19752,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
           TopLeft="1987.28437141089,373.23174290626">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19741,7 +19774,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada6]"
           TopLeft="1552.32471940319,370.803358096481">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19763,7 +19796,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco6]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco]"
           TopLeft="367.361457591084,711.384494943116">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19799,7 +19832,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
           TopLeft="1846.79729673387,236.998687834191">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19835,7 +19868,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
           TopLeft="90.2993221398812,219.381515154459">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19859,7 +19892,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco6]"
           TopLeft="1416.77097805951,251.393832672121">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19895,7 +19928,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco4]"
           TopLeft="969.993200281735,225.262929289984">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19931,7 +19964,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco3]"
           TopLeft="1123.55194665941,707.652622332896">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19967,7 +20000,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco]"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
           TopLeft="528.326533615068,215.288888888888">
           <EdgeLayout.Curve>
             <mssgle:Curve
