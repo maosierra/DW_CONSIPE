@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>CONSIPE.COMBUSTIBLE</Name>
-    <LastWriteTime>2022-10-16T20:09:08.3183822Z</LastWriteTime>
+    <LastWriteTime>2022-10-17T15:59:41.2511303Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Package.dtsx</Name>
-      <LastWriteTime>2022-10-16T20:23:26.038228Z</LastWriteTime>
+      <Name>ETL combustible.dtsx</Name>
+      <LastWriteTime>2022-10-17T15:59:41.2201504Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="ETL combustible"
   DTS:PackageType="5"
-  DTS:VersionBuild="101"
-  DTS:VersionGUID="{F29F70F0-0C6A-4EBB-9564-853D60C3B0AC}">
+  DTS:VersionBuild="109"
+  DTS:VersionGUID="{B2A7FC98-EC75-4E91-9ABC-F8CDC917C484}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,6 +26,25 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\CONSIPE FILES\REPORTE COMBUSTIBLE\GL-FT-011 Control  de Combustibles 2021.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-HOME.COMBUSTIBLE.user1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2FE5B2AE-04E4-4875-B2E9-B407B9B63E97}"
+      DTS:ObjectName="DESKTOP-HOME.COMBUSTIBLE.user1">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::db_connection_string]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="Password">@[User::db_password]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-HOME;User ID=sa;Initial Catalog=COMBUSTIBLE;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACaeHu95xpEaeFr2+f8IMbgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADSZn1b4h5p3Nnx9hQ/O3JWyUzMinfuXlgZHjVfqfpUKAAAAAAOgAAAAAIAACAAAAC1gp8TRFBFU4jFvdVFTsIh2DuCFxpJAAhNoYbqNivHlSAAAADukwWpERkkSQJLR6mFsBHS+J2I5MamyS+LKta2c7nnDkAAAABsuCZ6O2pROCo7FUUzsLMpEgn0yD7R6fPZ7v3J97134NXOHvsUgeNflaZK7NxOdO0EYhlu6ebUZ3WygKJ0iHmk</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -2082,8 +2101,58 @@
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Leer Equipos]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Lectura de equipos extraidos"
+      DTS:DTSID="{010302B9-4D4F-4098-A7D7-3920B8A3AC07}"
+      DTS:ObjectName="Leer Equipos">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::folder_raiz]+ @[User::folder_extraccion]+"\\equipos.csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="9226"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\CONSIPE FILES\Extraccion\equipos.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Equipos"
+              DTS:DTSID="{854DC651-D798-4B0B-9278-646C64BD9B7D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C2C08CAC-6D11-44B8-854D-A24A4683334D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="db_connection_string">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=DESKTOP-HOME;User ID=sa;Initial Catalog=COMBUSTIBLE;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D39EBABA-0D0D-421D-A982-7CD872E8B5FE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="db_password">
+      <DTS:VariableValue
+        DTS:DataType="8">power2022</DTS:VariableValue>
+    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{43ECDEBD-6B47-4FDC-85ED-623E6EC6EEE0}"
@@ -2092,6 +2161,15 @@
       DTS:ObjectName="folder_excel">
       <DTS:VariableValue
         DTS:DataType="8">\REPORTE COMBUSTIBLE</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{39A1552C-A39B-425C-BF69-E3998C29EC32}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="folder_extraccion">
+      <DTS:VariableValue
+        DTS:DataType="8">\Extraccion</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2108,6 +2186,7 @@
       DTS:refId="Package\CARGAR"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Contenedor de secuencias"
+      DTS:Disabled="True"
       DTS:DTSID="{05D145CF-50C8-452B-8B26-57CC3B2E765E}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -2119,6 +2198,7 @@
       DTS:refId="Package\Extraer"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Contenedor de secuencias"
+      DTS:Disabled="True"
       DTS:DTSID="{7D139B4D-FF6B-4626-AFB4-2379367D35A6}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -17367,7 +17447,365 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <pipeline
-              version="1" />
+              version="1">
+              <components>
+                <component
+                  refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda"
+                  componentClassID="{671046B0-AA63-4C9F-90E4-C06E0B710CE3}"
+                  contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+                  description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+                  name="Búsqueda"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT Nombre
+FROM     Equipos</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT Nombre
+FROM     Equipos) [refTable]
+where [refTable].[Nombre] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el tipo de caché de la tabla de búsqueda."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indica si se debe hacer referencia a metadatos en formato XML."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Nombre" dataType="DT_WSTR" length="250" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                      name="ParameterMap">#{Package\Transformar\TRANSFORMAR EQUIPOS\50:invalid};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-HOME.COMBUSTIBLE.user1]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-HOME.COMBUSTIBLE.user1]"
+                      description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Inputs[Entrada de búsqueda]"
+                      name="Entrada de búsqueda">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Inputs[Entrada de búsqueda].Columns[Equipos]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Equipos"
+                          lineageId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Equipos]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                              name="JoinToReferenceColumn">Nombre</property>
+                            <property
+                              dataType="System.Null"
+                              description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                      errorOrTruncationOperation="Búsqueda"
+                      exclusionGroup="1"
+                      name="Salida de entradas coincidentes de búsqueda"
+                      synchronousInputId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Inputs[Entrada de búsqueda]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                      description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en &quot;Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes&quot;."
+                      exclusionGroup="1"
+                      name="Salida de entradas no coincidentes de búsqueda"
+                      synchronousInputId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Inputs[Entrada de búsqueda]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Outputs[Salida de error de búsqueda]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Salida de error de búsqueda"
+                      synchronousInputId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Inputs[Entrada de búsqueda]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server"
+                  componentClassID="{F452EAF3-5EF0-43F1-8067-09DDF0BC6316}"
+                  contactInfo="Destino de SQL Server;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;5"
+                  description="Destino de SQL Server"
+                  name="Destino de SQL Server"
+                  version="5">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.String"
+                      description="El nombre del objeto de base de datos en el que copiar datos."
+                      expressionType="Notify"
+                      name="BulkInsertTableName">[dbo].[Equipos]</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Especifica que todas las restricciones del objeto de destino se comprueben durante la operación de copia de datos. Corresponde a la opción CHECK_CONSTRAINTS de inserción masiva."
+                      name="BulkInsertCheckConstraints">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número de la primera fila para copiar. Corresponde a la opción FIRSTROW de inserción masiva."
+                      expressionType="Notify"
+                      name="BulkInsertFirstRow">-1</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Especifica que todos los desencadenadores de inserción definidos en el objeto de destino se van a ejecutar durante la copia de datos. Corresponde a la opción FIRE_TRIGGERS de inserción masiva."
+                      name="BulkInsertFireTriggers">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Corresponde a la opción KEEPIDENTITY de inserción masiva."
+                      name="BulkInsertKeepIdentity">true</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica si las columnas que contienen NULL tendrán NULL copiado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida."
+                      name="BulkInsertKeepNulls">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número de la última fila para copiar. Corresponde a la opción LASTROW de inserción masiva."
+                      expressionType="Notify"
+                      name="BulkInsertLastRow">-1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número máximo de errores de sintaxis y de compilación que pueden producirse sin que se cancele la operación de copia. Cada fila que no se puede copiar se omite y se cuenta como un error. Corresponde a la opción MAXERRORS de inserción masiva."
+                      name="BulkInsertMaxErrors">-1</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica cómo se ordenan los datos que se van a copiar. Corresponde a la opción ORDER de inserción masiva."
+                      expressionType="Notify"
+                      name="BulkInsertOrder"></property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Especifica que se adquiere un bloqueo de nivel de tabla durante toda la operación de copia de datos. Corresponde a la opción TABLOCK de inserción masiva."
+                      name="BulkInsertTablock">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica en segundos el tiempo de espera del adaptador de destino de SQL antes de desactivarse si no hay ningún dato disponible para la inserción. Un valor 0 de tiempo de espera indica que no se agotará el tiempo de espera del adaptador de destino de SQL."
+                      expressionType="Notify"
+                      name="Timeout">30</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos."
+                      name="MaxInsertCommitSize">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-HOME.COMBUSTIBLE.user1]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-HOME.COMBUSTIBLE.user1]"
+                      description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server.Inputs[Entrada de destino de SQL Server]"
+                      hasSideEffects="true"
+                      name="Entrada de destino de SQL Server">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server.Inputs[Entrada de destino de SQL Server].Columns[Equipos]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Equipos"
+                          externalMetadataColumnId="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server.Inputs[Entrada de destino de SQL Server].ExternalColumns[Nombre]"
+                          lineageId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Equipos]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server.Inputs[Entrada de destino de SQL Server].ExternalColumns[Id]"
+                          dataType="i4"
+                          name="Id" />
+                        <externalMetadataColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server.Inputs[Entrada de destino de SQL Server].ExternalColumns[Nombre]"
+                          dataType="wstr"
+                          length="255"
+                          name="Nombre" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano"
+                  componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+                  contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+                  description="Origen de archivo plano"
+                  localeId="9226"
+                  name="Origen de archivo plano"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Especifica si las columnas de longitud cero se tratan como NULL."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Leer Equipos]"
+                      connectionManagerRefId="Package.ConnectionManagers[Leer Equipos]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
+                      name="Salida de origen de archivo plano">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Equipos]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Equipos]"
+                          length="255"
+                          lineageId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Equipos]"
+                          name="Equipos"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica si los datos están en formato binario."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Equipos]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Equipos" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano]"
+                      isErrorOut="true"
+                      name="Salida de error de origen de archivo plano">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Columna de salida de error de origen de archivo plano"
+                          lineageId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                          name="Columna de salida de error de origen de archivo plano" />
+                        <outputColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Transformar\TRANSFORMAR EQUIPOS.Paths[Salida de entradas no coincidentes de búsqueda]"
+                  endId="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server.Inputs[Entrada de destino de SQL Server]"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  startId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+                <path
+                  refId="Package\Transformar\TRANSFORMAR EQUIPOS.Paths[Salida de origen de archivo plano]"
+                  endId="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Salida de origen de archivo plano"
+                  startId="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano.Outputs[Salida de origen de archivo plano]" />
+              </paths>
+            </pipeline>
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -17494,9 +17932,9 @@
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="True"
+          IsExpanded="False"
           PanelSize="304.8,331.2"
-          Size="304.8,374.4"
+          Size="304.8,43.2"
           Id="Package\Extraer"
           TopLeft="93.4285730196508,42.92184472876" />
         <NodeLayout
@@ -17512,18 +17950,30 @@
           TopLeft="501.28572282256,48.7008391230167" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="398.228573019651,230.811341925888">
+          TopLeft="398.228573019651,64.52184472876">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="103.057149802909,0"
+              EndConnector="103.057149802909,166.978994394257"
               Start="0,0"
-              End="95.5571498029093,0">
+              End="95.5571498029092,166.978994394257">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="95.5571498029093,0" />
+                    End="47.5285749014546,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.5285749014546,0"
+                    Point2="51.5285749014546,0"
+                    Point3="51.5285749014546,4" />
+                  <mssgle:LineSegment
+                    End="51.5285749014546,162.978994394257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.5285749014546,162.978994394257"
+                    Point2="51.5285749014546,166.978994394257"
+                    Point3="55.5285749014546,166.978994394257" />
+                  <mssgle:LineSegment
+                    End="95.5571498029092,166.978994394257" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17741,7 +18191,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17763,7 +18215,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17797,7 +18251,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17831,7 +18287,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17865,7 +18323,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17899,7 +18359,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17933,7 +18395,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17967,102 +18431,8 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
-          TopLeft="782.987756283707,450.170314692901">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="147.635380878208,0"
-              Start="0,0"
-              End="140.135380878208,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="140.135380878208,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-13.720102529646,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
-          TopLeft="112.054422950374,479.381232517511">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="159.102047544877,0"
-              Start="0,0"
-              End="151.602047544877,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="151.602047544877,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-7.98676919631153,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
-          TopLeft="167.787756283707,812.825773605206">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="134.302047544874,0"
-              Start="0,0"
-              End="126.802047544874,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="126.802047544874,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-20.386769196313,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
-          TopLeft="799.787756283707,147.670314692901">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="183.502047544874,0"
-              Start="0,0"
-              End="176.002047544874,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="176.002047544874,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="4.21323080368697,5,167.5755859375,10.3349609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18103,30 +18473,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
-          TopLeft="737.298867394818,757.503648026234">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="299.102047544874,0"
-              Start="0,0"
-              End="291.602047544874,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="291.602047544874,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="62.013230803687,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
           TopLeft="528.943311839262,1140.7701214064">
           <EdgeLayout.Curve>
@@ -18151,147 +18497,123 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
-          TopLeft="916.169618252098,601.188803914124">
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
+          TopLeft="737.298867394818,757.503648026234">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.7781526822938"
+              EndConnector="299.102047544874,0"
               Start="0,0"
-              End="0,52.2781526822938">
+              End="291.602047544874,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.2781526822938" />
+                    End="291.602047544874,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="62.013230803687,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada]"
-          TopLeft="938.79184047432,298.188803914124">
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
+          TopLeft="112.054422950374,479.381232517511">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.778152682294"
+              EndConnector="159.102047544877,0"
               Start="0,0"
-              End="0,52.278152682294">
+              End="151.602047544877,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.278152682294" />
+                    End="151.602047544877,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-7.98676919631153,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
-          TopLeft="174.39184047432,339.583196390542">
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
+          TopLeft="799.787756283707,147.670314692901">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34.178152682294"
+              EndConnector="183.502047544874,0"
               Start="0,0"
-              End="0,26.678152682294">
+              End="176.002047544874,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.678152682294" />
+                    End="176.002047544874,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="4.21323080368697,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada3]"
-          TopLeft="667.310661475018,1291.78861062762">
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
+          TopLeft="167.787756283707,812.825773605206">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.87346910971621,58.7781526822941"
+              EndConnector="134.302047544874,0"
               Start="0,0"
-              End="8.87346910971621,51.2781526822941">
+              End="126.802047544874,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.3890763411471" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.3890763411471"
-                    Point2="0,29.3890763411471"
-                    Point3="4,29.3890763411471" />
-                  <mssgle:LineSegment
-                    End="4.87346910971621,29.3890763411471" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.87346910971621,29.3890763411471"
-                    Point2="8.87346910971621,29.3890763411471"
-                    Point3="8.87346910971621,33.3890763411471" />
-                  <mssgle:LineSegment
-                    End="8.87346910971621,51.2781526822941" />
+                    End="126.802047544874,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-20.386769196313,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
-          TopLeft="249.858507140989,628.499721738734">
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
+          TopLeft="782.987756283707,450.170314692901">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.778152682294"
+              EndConnector="147.635380878208,0"
               Start="0,0"
-              End="0,44.278152682294">
+              End="140.135380878208,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.278152682294" />
+                    End="140.135380878208,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
-          TopLeft="303.99184047432,963.444262826429">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.578152682294"
-              Start="0,0"
-              End="0,37.078152682294">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.078152682294" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-13.720102529646,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18325,114 +18647,164 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco]"
-          TopLeft="674.632200728152,776.555748842056">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-29.9210896170404,89.4924388133121"
-              Start="0,0"
-              End="-29.9210896170404,81.9924388133121">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.6772290218493" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.6772290218493"
-                    Point2="0,36.6772290218493"
-                    Point3="-4,36.6772290218493" />
-                  <mssgle:LineSegment
-                    End="-25.9210896170404,36.6772290218493" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-25.9210896170404,36.6772290218493"
-                    Point2="-29.9210896170404,36.6772290218493"
-                    Point3="-29.9210896170404,40.6772290218493" />
-                  <mssgle:LineSegment
-                    End="-29.9210896170404,81.9924388133121" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-58.1121854335202,41.6772290218493,86.30328125,11.0625"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
-          TopLeft="104.054422950374,831.477874421028">
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
+          TopLeft="303.99184047432,963.444262826429">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-30.4544229503737,89.492438813312"
+              EndConnector="0,44.578152682294"
               Start="0,0"
-              End="-30.4544229503737,81.992438813312">
+              End="0,37.078152682294">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.6630313848085" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.6630313848085"
-                    Point2="0,36.6630313848085"
-                    Point3="-4,36.6630313848085" />
-                  <mssgle:LineSegment
-                    End="-26.4544229503737,36.6630313848085" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.4544229503737,36.6630313848085"
-                    Point2="-30.4544229503737,36.6630313848085"
-                    Point3="-30.4544229503737,40.6630313848085" />
-                  <mssgle:LineSegment
-                    End="-30.4544229503737,81.992438813312" />
+                    End="0,37.078152682294" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-58.3788521001869,41.6630313848085,86.30328125,11.0625"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
-          TopLeft="711.787756283707,469.222415508723">
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
+          TopLeft="249.858507140989,628.499721738734">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-30.987756283707,89.492438813312"
+              EndConnector="0,51.778152682294"
               Start="0,0"
-              End="-30.987756283707,81.992438813312">
+              End="0,44.278152682294">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5751706454406" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.5751706454406"
-                    Point2="0,36.5751706454406"
-                    Point3="-4,36.5751706454406" />
-                  <mssgle:LineSegment
-                    End="-26.987756283707,36.5751706454406" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.987756283707,36.5751706454406"
-                    Point2="-30.987756283707,36.5751706454406"
-                    Point3="-30.987756283707,40.5751706454406" />
-                  <mssgle:LineSegment
-                    End="-30.987756283707,81.992438813312" />
+                    End="0,44.278152682294" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-58.6455187668535,41.5751706454406,86.30328125,11.0625"
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada3]"
+          TopLeft="667.310661475018,1291.78861062762">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.87346910971621,58.7781526822941"
+              Start="0,0"
+              End="8.87346910971621,51.2781526822941">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.3890763411471" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.3890763411471"
+                    Point2="0,29.3890763411471"
+                    Point3="4,29.3890763411471" />
+                  <mssgle:LineSegment
+                    End="4.87346910971621,29.3890763411471" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.87346910971621,29.3890763411471"
+                    Point2="8.87346910971621,29.3890763411471"
+                    Point3="8.87346910971621,33.3890763411471" />
+                  <mssgle:LineSegment
+                    End="8.87346910971621,51.2781526822941" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
+          TopLeft="174.39184047432,339.583196390542">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.178152682294"
+              Start="0,0"
+              End="0,26.678152682294">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.678152682294" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
+          TopLeft="916.169618252098,601.188803914124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.7781526822938"
+              Start="0,0"
+              End="0,52.2781526822938">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.2781526822938" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[Salida de columna derivada]"
+          TopLeft="938.79184047432,298.188803914124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.778152682294"
+              Start="0,0"
+              End="0,52.278152682294">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.278152682294" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18469,6 +18841,30 @@
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-21.5788521001869,40.0243217073889,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
+          TopLeft="67.8938781418535,182.816807985141">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.6924388133124"
+              Start="0,0"
+              End="0,49.1924388133124">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.1924388133124" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-43.151640625,19.0649694066562,86.30328125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18533,26 +18929,110 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
-          TopLeft="67.8938781418535,182.816807985141">
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
+          TopLeft="711.787756283707,469.222415508723">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56.6924388133124"
+              EndConnector="-30.987756283707,89.492438813312"
               Start="0,0"
-              End="0,49.1924388133124">
+              End="-30.987756283707,81.992438813312">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.1924388133124" />
+                    End="0,32.5751706454406" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.5751706454406"
+                    Point2="0,36.5751706454406"
+                    Point3="-4,36.5751706454406" />
+                  <mssgle:LineSegment
+                    End="-26.987756283707,36.5751706454406" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.987756283707,36.5751706454406"
+                    Point2="-30.987756283707,36.5751706454406"
+                    Point3="-30.987756283707,40.5751706454406" />
+                  <mssgle:LineSegment
+                    End="-30.987756283707,81.992438813312" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-43.151640625,19.0649694066562,86.30328125,11.0625"
+              BoundingBox="-58.6455187668535,41.5751706454406,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
+          TopLeft="104.054422950374,831.477874421028">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-30.4544229503737,89.492438813312"
+              Start="0,0"
+              End="-30.4544229503737,81.992438813312">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.6630313848085" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.6630313848085"
+                    Point2="0,36.6630313848085"
+                    Point3="-4,36.6630313848085" />
+                  <mssgle:LineSegment
+                    End="-26.4544229503737,36.6630313848085" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.4544229503737,36.6630313848085"
+                    Point2="-30.4544229503737,36.6630313848085"
+                    Point3="-30.4544229503737,40.6630313848085" />
+                  <mssgle:LineSegment
+                    End="-30.4544229503737,81.992438813312" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-58.3788521001869,41.6630313848085,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\ENTRADAS COMBUSTIBLE.Paths[celda_texto_blanco]"
+          TopLeft="674.632200728152,776.555748842056">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-29.9210896170404,89.4924388133121"
+              Start="0,0"
+              End="-29.9210896170404,81.9924388133121">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.6772290218493" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.6772290218493"
+                    Point2="0,36.6772290218493"
+                    Point3="-4,36.6772290218493" />
+                  <mssgle:LineSegment
+                    End="-25.9210896170404,36.6772290218493" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.9210896170404,36.6772290218493"
+                    Point2="-29.9210896170404,36.6772290218493"
+                    Point3="-29.9210896170404,40.6772290218493" />
+                  <mssgle:LineSegment
+                    End="-29.9210896170404,81.9924388133121" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-58.1121854335202,41.6772290218493,86.30328125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18973,7 +19453,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18995,7 +19477,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19017,7 +19501,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19065,6 +19551,10 @@
     <LayoutInfo>
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="100.8,41.6"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE\UT 3"
+          TopLeft="1381.83764472618,209.793832672121" />
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\excluidos ut3"
@@ -19134,13 +19624,13 @@
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\errores TP2"
           TopLeft="1338.92066087095,669.015087367918" />
         <NodeLayout
+          Size="144,41.6"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas INARC"
+          TopLeft="1916.54242414741,331.63174290626" />
+        <NodeLayout
           Size="147.2,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut3"
           TopLeft="1477.06666666667,423.011010092176" />
-        <NodeLayout
-          Size="132.8,41.6"
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE\errores TP1"
-          TopLeft="582.730171802631,672.746959978138" />
         <NodeLayout
           Size="96,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\TP2"
@@ -19154,21 +19644,17 @@
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\errores INARC"
           TopLeft="2057.89934427875,198.361152869213" />
         <NodeLayout
-          Size="108.8,41.6"
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE\INARC"
-          TopLeft="1809.19729673387,195.398687834191" />
+          Size="96,41.6"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE\TP1"
+          TopLeft="334.028124257751,669.784494943116" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas ut3"
           TopLeft="1489.18277213971,329.203358096481" />
         <NodeLayout
-          Size="96,41.6"
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE\TP1"
-          TopLeft="334.028124257751,669.784494943116" />
-        <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE\Multidifusión 1"
-          TopLeft="788.888888888889,86.0444444444445" />
+          Size="132.8,41.6"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE\errores TP1"
+          TopLeft="582.730171802631,672.746959978138" />
         <NodeLayout
           Size="110.4,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas"
@@ -19186,33 +19672,33 @@
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\Origen de Excel"
           TopLeft="779.669844432536,6.52026272487387" />
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv TP2"
-          TopLeft="1185.44763526656,896.09332940066" />
-        <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut2"
-          TopLeft="1030.28888888889,413.703636357747" />
-        <NodeLayout
           Size="131.2,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas TP1"
           TopLeft="441.373251671291,806.017550015185" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv TP2"
+          TopLeft="1185.44763526656,896.09332940066" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas ut2"
           TopLeft="1042.40499436193,319.895984362052" />
         <NodeLayout
-          Size="144,41.6"
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas INARC"
-          TopLeft="1916.54242414741,331.63174290626" />
+          Size="147.2,41.6"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE\salidas csv ut2"
+          TopLeft="1030.28888888889,413.703636357747" />
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE\Multidifusión 1"
+          TopLeft="788.888888888889,86.0444444444445" />
         <NodeLayout
           Size="195.2,41.6"
           Id="Package\Extraer\SALIDAS COMBUSTIBLE\Destino de archivo plano"
           TopLeft="165.511111111111,399.822222222222" />
         <NodeLayout
-          Size="100.8,41.6"
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE\UT 3"
-          TopLeft="1381.83764472618,209.793832672121" />
+          Size="108.8,41.6"
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE\INARC"
+          TopLeft="1809.19729673387,195.398687834191" />
         <EdgeLayout
           Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de origen de Excel]"
           TopLeft="859.079366660713,48.1202627248739">
@@ -19232,7 +19718,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19266,7 +19754,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19300,7 +19790,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19334,7 +19826,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19368,7 +19862,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19402,7 +19898,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19436,7 +19934,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19470,102 +19970,8 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
-          TopLeft="181.926533615068,197.840525449748">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="146.835380878207,0"
-              Start="0,0"
-              End="139.335380878207,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="139.335380878207,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-14.1201025296465,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
-          TopLeft="1482.63764472618,230.545653403477">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="133.616333015871,0"
-              Start="0,0"
-              End="126.116333015871,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="126.116333015871,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-20.7296264608145,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
-          TopLeft="430.028124257751,692.065727460627">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.70204754488,0"
-              Start="0,0"
-              End="145.20204754488,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="145.20204754488,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-11.18676919631,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
-          TopLeft="1035.8598669484,205.944161807495">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="147.902047544872,0"
-              Start="0,0"
-              End="140.402047544872,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="140.402047544872,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-13.586769196314,5,167.5755859375,10.3349609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -19594,30 +20000,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
-          TopLeft="594.193200281735,196.859010295288">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="134.568714211541,0"
-              Start="0,0"
-              End="127.068714211541,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="127.068714211541,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-20.2534358629795,5,167.5755859375,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional5]"
           TopLeft="1917.99729673387,217.679920351702">
           <EdgeLayout.Curve>
@@ -19642,135 +20024,123 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
-          TopLeft="650.546941625411,343.521943960956">
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional4]"
+          TopLeft="594.193200281735,196.859010295288">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.207651995695"
+              EndConnector="134.568714211541,0"
               Start="0,0"
-              End="0,52.707651995695">
+              End="127.068714211541,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.707651995695" />
+                    End="127.068714211541,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-20.2534358629795,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada]"
-          TopLeft="1261.90568800309,843.885677404966">
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional3]"
+          TopLeft="1482.63764472618,230.545653403477">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.2076519956941"
+              EndConnector="133.616333015871,0"
               Start="0,0"
-              End="0,44.7076519956941">
+              End="126.116333015871,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.7076519956941" />
+                    End="126.116333015871,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-20.7296264608145,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
-          TopLeft="1105.54694162541,361.495984362052">
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional2]"
+          TopLeft="1035.8598669484,205.944161807495">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.2076519956947"
+              EndConnector="147.902047544872,0"
               Start="0,0"
-              End="0,44.7076519956947">
+              End="140.402047544872,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.7076519956947" />
+                    End="140.402047544872,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-13.586769196314,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada3]"
-          TopLeft="261.302497180967,352.94790355986">
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional1]"
+          TopLeft="430.028124257751,692.065727460627">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.8743186623623"
+              EndConnector="152.70204754488,0"
               Start="0,0"
-              End="0,39.3743186623623">
+              End="145.20204754488,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.3743186623623" />
+                    End="145.20204754488,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-11.18676919631,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
-          TopLeft="505.715198934766,847.617550015185">
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de error de división condicional]"
+          TopLeft="181.926533615068,197.840525449748">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.2076519956941"
+              EndConnector="146.835380878207,0"
               Start="0,0"
-              End="0,44.7076519956941">
+              End="139.335380878207,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.7076519956941" />
+                    End="139.335380878207,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
-          TopLeft="1987.28437141089,373.23174290626">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.2076519956947"
-              Start="0,0"
-              End="0,44.7076519956947">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.7076519956947" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-14.1201025296465,5,167.5755859375,10.3349609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19792,102 +20162,152 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco]"
-          TopLeft="367.361457591084,711.384494943116">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-70.6322007281432,87.892438813313"
-              Start="0,0"
-              End="-70.6322007281432,80.392438813313">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.0214913169315" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.0214913169315"
-                    Point2="0,36.0214913169315"
-                    Point3="-4,36.0214913169315" />
-                  <mssgle:LineSegment
-                    End="-66.6322007281432,36.0214913169315" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-66.6322007281432,36.0214913169315"
-                    Point2="-70.6322007281432,36.0214913169315"
-                    Point3="-70.6322007281432,40.0214913169315" />
-                  <mssgle:LineSegment
-                    End="-70.6322007281432,80.392438813313" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-78.4677409890716,41.0214913169315,86.30328125,11.0625"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
-          TopLeft="1846.79729673387,236.998687834191">
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada5]"
+          TopLeft="1987.28437141089,373.23174290626">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-68.4988673948178,87.8924388133124"
+              EndConnector="0,52.2076519956947"
               Start="0,0"
-              End="-68.4988673948178,80.3924388133124">
+              End="0,44.7076519956947">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.9212576019624" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.9212576019624"
-                    Point2="0,35.9212576019624"
-                    Point3="-4,35.9212576019624" />
-                  <mssgle:LineSegment
-                    End="-64.4988673948178,35.9212576019624" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-64.4988673948178,35.9212576019624"
-                    Point2="-68.4988673948178,35.9212576019624"
-                    Point3="-68.4988673948178,39.9212576019624" />
-                  <mssgle:LineSegment
-                    End="-68.4988673948178,80.3924388133124" />
+                    End="0,44.7076519956947" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-77.4010743224089,40.9212576019624,86.30328125,11.0625"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
-          TopLeft="90.2993221398812,219.381515154459">
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada4]"
+          TopLeft="505.715198934766,847.617550015185">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,103.892438813312"
+              EndConnector="0,52.2076519956941"
               Start="0,0"
-              End="0,96.3924388133121">
+              End="0,44.7076519956941">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,96.3924388133121" />
+                    End="0,44.7076519956941" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-43.151640625,42.664969406656,86.30328125,11.0625"
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada3]"
+          TopLeft="261.302497180967,352.94790355986">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.8743186623623"
+              Start="0,0"
+              End="0,39.3743186623623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3743186623623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada2]"
+          TopLeft="1105.54694162541,361.495984362052">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.2076519956947"
+              Start="0,0"
+              End="0,44.7076519956947">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.7076519956947" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada1]"
+          TopLeft="650.546941625411,343.521943960956">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.207651995695"
+              Start="0,0"
+              End="0,52.707651995695">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.707651995695" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[Salida de columna derivada]"
+          TopLeft="1261.90568800309,843.885677404966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.2076519956941"
+              Start="0,0"
+              End="0,44.7076519956941">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.7076519956941" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -19924,6 +20344,42 @@
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-79.6677409890767,34.093834689669,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
+          TopLeft="528.326533615068,215.288888888888">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-51.6988673948182,88.7813277022001"
+              Start="0,0"
+              End="-51.6988673948182,81.2813277022001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.3448560280881" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.3448560280881"
+                    Point2="0,36.3448560280881"
+                    Point3="-4,36.3448560280881" />
+                  <mssgle:LineSegment
+                    End="-47.6988673948182,36.3448560280881" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47.6988673948182,36.3448560280881"
+                    Point2="-51.6988673948182,36.3448560280881"
+                    Point3="-51.6988673948182,40.3448560280881" />
+                  <mssgle:LineSegment
+                    End="-51.6988673948182,81.2813277022001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-69.0010743224091,41.3448560280881,86.30328125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -20000,38 +20456,98 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco5]"
-          TopLeft="528.326533615068,215.288888888888">
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco2]"
+          TopLeft="90.2993221398812,219.381515154459">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-51.6988673948182,88.7813277022001"
+              EndConnector="0,103.892438813312"
               Start="0,0"
-              End="-51.6988673948182,81.2813277022001">
+              End="0,96.3924388133121">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.3448560280881" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.3448560280881"
-                    Point2="0,36.3448560280881"
-                    Point3="-4,36.3448560280881" />
-                  <mssgle:LineSegment
-                    End="-47.6988673948182,36.3448560280881" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.6988673948182,36.3448560280881"
-                    Point2="-51.6988673948182,36.3448560280881"
-                    Point3="-51.6988673948182,40.3448560280881" />
-                  <mssgle:LineSegment
-                    End="-51.6988673948182,81.2813277022001" />
+                    End="0,96.3924388133121" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-69.0010743224091,41.3448560280881,86.30328125,11.0625"
+              BoundingBox="-43.151640625,42.664969406656,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco1]"
+          TopLeft="1846.79729673387,236.998687834191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-68.4988673948178,87.8924388133124"
+              Start="0,0"
+              End="-68.4988673948178,80.3924388133124">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.9212576019624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.9212576019624"
+                    Point2="0,35.9212576019624"
+                    Point3="-4,35.9212576019624" />
+                  <mssgle:LineSegment
+                    End="-64.4988673948178,35.9212576019624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-64.4988673948178,35.9212576019624"
+                    Point2="-68.4988673948178,35.9212576019624"
+                    Point3="-68.4988673948178,39.9212576019624" />
+                  <mssgle:LineSegment
+                    End="-68.4988673948178,80.3924388133124" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-77.4010743224089,40.9212576019624,86.30328125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer\SALIDAS COMBUSTIBLE.Paths[celda_texto_blanco]"
+          TopLeft="367.361457591084,711.384494943116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-70.6322007281432,87.892438813313"
+              Start="0,0"
+              End="-70.6322007281432,80.392438813313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.0214913169315" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.0214913169315"
+                    Point2="0,36.0214913169315"
+                    Point3="-4,36.0214913169315" />
+                  <mssgle:LineSegment
+                    End="-66.6322007281432,36.0214913169315" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-66.6322007281432,36.0214913169315"
+                    Point2="-70.6322007281432,36.0214913169315"
+                    Point3="-70.6322007281432,40.0214913169315" />
+                  <mssgle:LineSegment
+                    End="-70.6322007281432,80.392438813313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-78.4677409890716,41.0214913169315,86.30328125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -20300,6 +20816,103 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Transformar\TRANSFORMAR EQUIPOS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Transformar\TRANSFORMAR EQUIPOS\Origen de archivo plano"
+          TopLeft="80.3809537498317,14.682353147091" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda"
+          TopLeft="119.238097268708,95.4352954560909" />
+        <EdgeLayout
+          Id="Package\Transformar\TRANSFORMAR EQUIPOS.Paths[Salida de origen de archivo plano]"
+          TopLeft="178.60952550927,56.2823531470909">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.1529423090001"
+              Start="0,0"
+              End="0,31.6529423090001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6529423090001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server"
+          TopLeft="85.7142871739914,197.843139449893" />
+        <EdgeLayout
+          Id="Package\Transformar\TRANSFORMAR EQUIPOS.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="179.87619222135,137.035295456091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.8078439938021"
+              Start="0,0"
+              End="0,53.3078439938021">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.3078439938021" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-106.8890234375,20.556265746901,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transformar\TRANSFORMAR EQUIPOS\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transformar\TRANSFORMAR EQUIPOS\Destino de SQL Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
